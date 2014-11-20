@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.reef:reef-tests:0.10-incubating-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/reef/reef-tests/0.10-incubating-SNAPSHOT/reef-tests-0.10-incubating-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/reef/reef-tests/0.10-incubating-SNAPSHOT/reef-tests-0.10-incubating-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/reef/reef-tests/0.10-incubating-SNAPSHOT/reef-tests-0.10-incubating-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
