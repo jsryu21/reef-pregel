@@ -39,7 +39,6 @@ public final class PregelREEF {
     private final int timeout;
     private final PregelParameters pregelParameters;
 
-
     /**
      * This class is instantiated by TANG
      *
@@ -50,6 +49,7 @@ public final class PregelREEF {
      * @param onLocal whether to run on local or yarn runtime
      * @param splitNum desired number of splits to read data
      * @param timeout maximum time allowed for the job to run, in milliseconds
+     * @param pregelParameters parameters specific to the pregel framework
      */
 
     @Inject
@@ -57,7 +57,8 @@ public final class PregelREEF {
                        @Parameter(InputDir.class) final String inputDir,
                        @Parameter(OnLocal.class) final boolean onLocal,
                        @Parameter(SplitNum.class) final int splitNum,
-                       @Parameter(Timeout.class) final int timeout) {
+                       @Parameter(Timeout.class) final int timeout,
+                       final PregelParameters pregelParameters) {
         this.evalSize = evalSize;
         this.inputDir = inputDir;
         this.onLocal = onLocal;

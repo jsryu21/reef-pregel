@@ -3,17 +3,23 @@ package edu.snu.bdcs.reef.pregel;
 import com.microsoft.reef.io.network.nggroup.api.driver.CommunicationGroupDriver;
 import com.microsoft.reef.io.network.nggroup.api.driver.GroupCommDriver;
 import com.microsoft.reef.io.network.nggroup.impl.config.BroadcastOperatorSpec;
+import com.microsoft.reef.io.network.nggroup.impl.config.ReduceOperatorSpec;
+import edu.snu.bdcs.reef.pregel.data.PregelDataParser;
+import edu.snu.bdcs.reef.pregel.groupcomm.names.InitialTopoReduce;
+import edu.snu.bdcs.reef.pregel.groupcomm.subs.VertexListCodec;
+import edu.snu.bdcs.reef.pregel.groupcomm.subs.VertexListReduceFunction;
 import edu.snu.bdcs.reef.pregel.parameters.PregelParameters;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.MsgBroadcast;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.InitialTopoBroadcast;
-import javafx.event.EventHandler;
+import edu.snu.cms.reef.ml.kmeans.utils.DataParseService;
 import org.apache.reef.driver.context.ActiveContext;
 import org.apache.reef.driver.evaluator.EvaluatorRequestor;
+import org.apache.reef.driver.task.TaskConfiguration;
 import org.apache.reef.evaluator.context.parameters.ContextIdentifier;
 import org.apache.reef.io.data.loading.api.DataLoadingService;
+import org.apache.reef.io.serialization.SerializableCodec;
 import org.apache.reef.tang.Configuration;
+import org.apache.reef.tang.Configurations;
 import org.apache.reef.tang.Injector;
 import org.apache.reef.tang.Tang;
 import org.apache.reef.tang.exceptions.InjectionException;
@@ -81,12 +87,14 @@ public final class PregelDriver {
      * Broadcast and Reduce operations to use.
      *
      * @param requestor object used to request for new evaluators to the resource manager
+     * @param groupCommDriver manager for group communication configurations
      * @param dataLoadingService manager for Data Loading configurations
      * @param pregelParameters parameter manager related specifically to the Pregel DSL
      */
 
     @Inject
     private PregelDriver(final EvaluatorRequestor requestor,
+                         final GroupCommDriver groupCommDriver,
                          final DataLoadingService dataLoadingService,
                          final PregelParameters pregelParameters) {
         this.requestor = requestor;
@@ -96,28 +104,73 @@ public final class PregelDriver {
 
         this.commGroup = groupCommDriver.newCommunicationGroup(
                 CommunicationGroup.class,
-                dataLoadingService.getNumberOfPartitions() +1);
+                dataLoadingService.getNumberOfPartitions() + 1);
+
+        this.commGroup
+                .addBroadcast(CtrlSyncBroadcast.class,
+                        BroadcastOperatorSpec.newBuilder()
+                                .setSenderId(PregelControllerTask.TASK_ID)
+                                .setDataCodecClass(SerializableCodec.class)
+                                .build())
+                .addReduce(InitialTopoReduce.class,
+                        ReduceOperatorSpec.newBuilder()
+                                .setReceiverId(PregelControllerTask.TASK_ID)
+                                .setDataCodecClass(VertexListCodec.class)
+                                .setReduceFunctionClass(VertexListReduceFunction.class)
+                                .build())
+                .finalise();
 
     }
 
-    final class ActiveContextHandler implements EventHandler<ActiveContext>{
+    final class ActiveContextHandler implements org.apache.reef.wake.EventHandler<ActiveContext> {
 
         @Override
         public void onNext(final ActiveContext activeContext) {
 
+            if (!groupCommDriver.isConfigured(activeContext)) {
+                Configuration groupCommContextConf = groupCommDriver.getContextConfiguration();
+                Configuration groupCommServiceConf = groupCommDriver.getContextConfiguration();
+                Configuration finalServiceConf;
 
-            if(dataLoadingService.isComputeContext(activeContext)) {
-                LOG.log(Level.INFO, "Submitting DataLoadingContext for ControllerTask");
-                Configuration dataLoadingContextConf = dataLoadingService.getContextConfiguration();
-                Configuration dataLoadingServiceConf = dataLoadingService.getServiceConfiguration();
-                ctrlTaskContextId = getContextId(dataLoadingContextConf);
+                if (dataLoadingService.isComputeContext(activeContext)) {
 
+                    LOG.log(Level.INFO, "Submitting GroupCommContext for ControllerTask to underlying context");
+                    ctrlTaskContextId = getContextId(groupCommContextConf);
+                    finalServiceConf = groupCommServiceConf;
+                } else {
+                    LOG.log(Level.INFO, "Submitting GroupCommContext for ComputeTask to underlying context");
+                    final Configuration dataParseConf = DataParseService.getServiceConfiguration(PregelDataParser.class);
+                    finalServiceConf = Configurations.merge(groupCommServiceConf, dataParseConf);
+                }
+
+                activeContext.submitContextAndService(groupCommServiceConf, finalServiceConf);
+
+            } else {
+                final Configuration partialTaskConf;
+
+                if (activeContext.getId().equals(ctrlTaskContextId)) {
+                    LOG.log(Level.INFO, "Submit ControllerTask");
+                    partialTaskConf = Configurations.merge(
+                            TaskConfiguration.CONF
+                                    .set(TaskConfiguration.IDENTIFIER, PregelControllerTask.TASK_ID)
+                                    .set(TaskConfiguration.TASK, PregelControllerTask.class)
+                                    .build(),
+                            pregelParameters.getCtrlTaskConfiguration());
+                } else {
+                    LOG.log(Level.INFO, "Submit ComputeTask");
+                    partialTaskConf = Configurations.merge(
+                            TaskConfiguration.CONF
+                                    .set(TaskConfiguration.IDENTIFIER, "CmpTask-" + taskId.getAndIncrement())
+                                    .set(TaskConfiguration.TASK, PregelComputeTask.class)
+                                    .build(),
+                            pregelParameters.getCompTaskConfiguration());
+                }
+
+                commGroup.addTask(partialTaskConf);
+                final Configuration finalTaskConf = groupCommDriver.getTaskConfiguration(partialTaskConf);
+                activeContext.submitContext(finalTaskConf);
             }
-
-
         }
-
-
     }
 
 
@@ -132,5 +185,4 @@ public final class PregelDriver {
             throw new RuntimeException("Unable to inject context identifier from context conf", e);
         }
     }
-
 }
