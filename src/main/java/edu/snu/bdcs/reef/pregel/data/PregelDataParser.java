@@ -1,8 +1,8 @@
 package edu.snu.bdcs.reef.pregel.data;
 
 import edu.snu.bdcs.reef.pregel.Inject;
-import edu.snu.cms.reef.ml.kmeans.utils.DataParser;
-import edu.snu.cms.reef.ml.kmeans.utils.ParseException;
+import edu.snu.bdcs.reef.pregel.utils.DataParser;
+import edu.snu.bdcs.reef.pregel.utils.ParseException;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.mahout.math.DenseVector;

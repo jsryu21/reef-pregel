@@ -11,9 +11,11 @@ import edu.snu.bdcs.reef.pregel.groupcomm.subs.VertexListReduceFunction;
 import edu.snu.bdcs.reef.pregel.parameters.PregelParameters;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
-import edu.snu.cms.reef.ml.kmeans.utils.DataParseService;
+import edu.snu.bdcs.reef.pregel.utils.DataParseService;
+import edu.snu.cms.reef.ml.kmeans.KMeansComputeTask;
 import org.apache.reef.driver.context.ActiveContext;
 import org.apache.reef.driver.evaluator.EvaluatorRequestor;
+import org.apache.reef.driver.task.FailedTask;
 import org.apache.reef.driver.task.TaskConfiguration;
 import org.apache.reef.evaluator.context.parameters.ContextIdentifier;
 import org.apache.reef.io.data.loading.api.DataLoadingService;
@@ -23,6 +25,7 @@ import org.apache.reef.tang.Configurations;
 import org.apache.reef.tang.Injector;
 import org.apache.reef.tang.Tang;
 import org.apache.reef.tang.exceptions.InjectionException;
+import org.apache.reef.wake.EventHandler;
 
 import javax.inject.Inject;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -171,6 +174,38 @@ public final class PregelDriver {
                 activeContext.submitContext(finalTaskConf);
             }
         }
+    }
+
+    /**
+     * When a certain Compute Task fails, we add the Task back and let it participate in
+     * Group Communication again. However if the failed Task is the Controller Task,
+     * we just shut down the whole job because it's hard to recover the cluster centroid info.
+     */
+
+    final class FailedTaskHandler implements EventHandler<FailedTask>{
+        @Override
+        public void onNext (FailedTask failedTask) {
+            LOG.info(failedTask.getId() + "has failed");
+
+            //Stop the whole job if the failed Task is the Compute Task
+            if (failedTask.getActiveContext().get().getId().equals(ctrlTaskContextId)) {
+                throw new RuntimeException("Controller Task failed; aborting job");
+            }
+
+            final Configuration partialTaskConf = Tang.Factory.getTang()
+                    .newConfigurationBuilder(
+                            TaskConfiguration.CONF
+                                    .set(TaskConfiguration.IDENTIFIER, failedTask.getId() + "-R")
+                                    .set(TaskConfiguration.TASK, KMeansComputeTask.class)
+                                    .build())
+                    .build();
+
+            // Re-add the failed Compute Task
+            commGroup.addTask(partialTaskConf);
+            final Configuration taskConf = groupCommDriver.getTaskConfiguration((partialTaskConf));
+            failedTask.getActiveContext().get().submitTask(taskConf);
+        }
+
     }
 
 
