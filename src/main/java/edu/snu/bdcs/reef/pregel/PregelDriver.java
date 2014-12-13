@@ -12,7 +12,6 @@ import edu.snu.bdcs.reef.pregel.parameters.PregelParameters;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
 import edu.snu.bdcs.reef.pregel.utils.DataParseService;
-import edu.snu.cms.reef.ml.kmeans.KMeansComputeTask;
 import org.apache.reef.driver.context.ActiveContext;
 import org.apache.reef.driver.evaluator.EvaluatorRequestor;
 import org.apache.reef.driver.task.FailedTask;
@@ -196,7 +195,7 @@ public final class PregelDriver {
                     .newConfigurationBuilder(
                             TaskConfiguration.CONF
                                     .set(TaskConfiguration.IDENTIFIER, failedTask.getId() + "-R")
-                                    .set(TaskConfiguration.TASK, KMeansComputeTask.class)
+                                    .set(TaskConfiguration.TASK, PregelComputeTask.class)
                                     .build())
                     .build();
 
