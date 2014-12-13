@@ -95,6 +95,10 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
 
         // 1. Start Algorithm
 
+
+
+
+
         return null;
     }
 }
