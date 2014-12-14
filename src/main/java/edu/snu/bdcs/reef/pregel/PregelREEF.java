@@ -76,11 +76,13 @@ public final class PregelREEF {
         cl.registerShortNameOfClass(OnLocal.class);
         cl.registerShortNameOfClass(SplitNum.class);
         cl.registerShortNameOfClass(Timeout.class);
+        PregelParameters.registerShortNameOfClass(cl);
 
         cl.processCommandLine(args);
 
         return Tang.Factory.getTang().newInjector(cb.build()).getInstance(PregelREEF.class);
     }
+
     public final static void main(final String[] args) {
         LauncherStatus status;
         try {
