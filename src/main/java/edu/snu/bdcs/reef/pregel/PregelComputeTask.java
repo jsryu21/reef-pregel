@@ -93,8 +93,10 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
             vectexList.add(new Vertex(vector));
         }
 
+
         // 1. Start Algorithm
 
+        System.out.printf("Test Size %d", vectexList.size());
 
 
 

@@ -124,7 +124,7 @@ public final class PregelDriver {
 
     }
 
-    final class ActiveContextHandler implements org.apache.reef.wake.EventHandler<ActiveContext> {
+    final class ActiveContextHandler implements EventHandler<ActiveContext> {
 
         @Override
         public void onNext(final ActiveContext activeContext) {

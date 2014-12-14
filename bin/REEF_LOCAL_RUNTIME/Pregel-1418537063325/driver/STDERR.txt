@@ -1,0 +1,467 @@
+2014-12-14 15:04:23,559 미세 reef.runtime.common.Launcher.main main | Launcher started with user name [puppybit]
+2014-12-14 15:04:23,626 미세 reef.runtime.common.Launcher.main main | Launcher started. Assertions are DISABLED in this process.
+2014-12-14 15:04:23,814 미세 reef.wake.impl.StageManager.<init> main | StageManager adds a shutdown hook
+2014-12-14 15:04:23,816 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@7aed9585
+2014-12-14 15:04:23,820 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@23365dcc
+2014-12-14 15:04:23,829 미세 reef.wake.remote.NetUtils.getLocalAddress main | Local address is 192.168.0.12
+2014-12-14 15:04:24,079 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Binding to 0
+2014-12-14 15:04:24,080 가장 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Try port 15,742
+2014-12-14 15:04:24,157 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Starting netty transport socket address: /192.168.0.12:15742
+2014-12-14 15:04:24,160 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.remote.impl.DefaultRemoteManagerImplementation@12339dd9
+2014-12-14 15:04:24,161 가장 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.<init> main | RemoteManager REEF_LAUNCHER instantiated id socket://192.168.0.12:15742 counter 1 listening on /192.168.0.12:15742:15,742
+2014-12-14 15:04:24,163 미세 reef.runtime.common.utils.RemoteManager.<init> main | Instantiated RemoteManager with remoteId: socket://192.168.0.12:15742
+2014-12-14 15:04:24,165 미세 reef.runtime.common.Launcher.main main | Launcher starting
+2014-12-14 15:04:24,166 보다 미세 reef.runtime.common.launch.LaunchClass.run main | ENTRY Starting the clock
+2014-12-14 15:04:24,167 가장 미세 reef.runtime.common.launch.LaunchClass.readConfigurationFromDisk main | Loading configuration file: reef/local/driver.conf
+2014-12-14 15:04:24,685 미세 reef.wake.time.runtime.RuntimeClock.<init> main | RuntimeClock instantiated.
+2014-12-14 15:04:24,688 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.getHandler main | RemoteManager: REEF_LAUNCHER destinationIdentifier: socket://192.168.0.12:13712 messageType: org.apache.reef.proto.ReefServiceProtos$JobStatusProto
+2014-12-14 15:04:24,690 미세 reef.wake.remote.impl.ProxyEventHandler.<init> main | ProxyEventHandler myId: socket://192.168.0.12:15742 remoteId: socket://192.168.0.12:13712 remoteSink: default handler: org.apache.reef.wake.remote.impl.RemoteSenderEventHandler@2c4689ad
+2014-12-14 15:04:24,691 미세 reef.runtime.common.driver.client.ClientConnection.<init> main | Instantiated 'ClientConnection'
+2014-12-14 15:04:24,692 보다 미세 reef.runtime.common.driver.DriverStatusManager.<init> main | ENTRY
+2014-12-14 15:04:24,693 미세 reef.runtime.common.driver.DriverStatusManager.<init> main | Instantiated 'DriverStatusManager'
+2014-12-14 15:04:24,693 보다 미세 reef.runtime.common.driver.DriverStatusManager.<init> main | RETURN
+2014-12-14 15:04:24,694 미세 reef.runtime.common.driver.evaluator.Evaluators.<init> main | Instantiated 'Evaluators'
+2014-12-14 15:04:24,700 미세 reef.runtime.common.driver.catalog.ResourceCatalogImpl.<init> main | Instantiated 'ResourceCatalogImpl'
+2014-12-14 15:04:24,702 가장 미세 reef.runtime.local.driver.ContainerManager.<init> main | Initializing Container Manager with 5 containers
+2014-12-14 15:04:24,703 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.registerHandler main | RemoteManager: REEF_LAUNCHER messageType: org.apache.reef.proto.ReefServiceProtos$RuntimeErrorProto handler: org.apache.reef.runtime.local.driver.ContainerManager$1
+2014-12-14 15:04:24,704 보다 미세 reef.wake.remote.impl.HandlerContainer.registerHandler main | class org.apache.reef.proto.ReefServiceProtos$RuntimeErrorProto
+2014-12-14 15:04:24,705 미세 reef.runtime.local.driver.ContainerManager.<init> main | Initialized Container Manager with 5 containers
+2014-12-14 15:04:24,718 미세 reef.runtime.local.driver.ResourceManager.<init> main | Instantiated 'ResourceManager'
+2014-12-14 15:04:25,084 미세 hadoop.metrics2.lib.MutableMetricsFactory.newForField main | field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of successful kerberos logins and latency (milliseconds)], about=, valueName=Time, type=DEFAULT, always=false, sampleName=Ops)
+2014-12-14 15:04:25,095 미세 hadoop.metrics2.lib.MutableMetricsFactory.newForField main | field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of failed kerberos logins and latency (milliseconds)], about=, valueName=Time, type=DEFAULT, always=false, sampleName=Ops)
+2014-12-14 15:04:25,096 미세 hadoop.metrics2.lib.MutableMetricsFactory.newForField main | field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[GetGroups], about=, valueName=Time, type=DEFAULT, always=false, sampleName=Ops)
+2014-12-14 15:04:25,098 미세 hadoop.metrics2.impl.MetricsSystemImpl.register main | UgiMetrics, User and group related metrics
+2014-12-14 15:04:25,350 미세 hadoop.security.Groups.getUserToGroupsMappingService main |  Creating new Groups object
+2014-12-14 15:04:25,355 미세 hadoop.util.NativeCodeLoader.<clinit> main | Trying to load the custom-built native-hadoop library...
+2014-12-14 15:04:25,357 미세 hadoop.util.NativeCodeLoader.<clinit> main | Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+2014-12-14 15:04:25,358 미세 hadoop.util.NativeCodeLoader.<clinit> main | java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2014-12-14 15:04:25,358 경고 hadoop.util.NativeCodeLoader.<clinit> main | Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-12-14 15:04:25,359 미세 hadoop.security.JniBasedUnixGroupsMappingWithFallback.<init> main | Falling back to shell based
+2014-12-14 15:04:25,361 미세 hadoop.security.JniBasedUnixGroupsMappingWithFallback.<init> main | Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+2014-12-14 15:04:25,378 미세 hadoop.util.Shell.isSetsidSupported main | setsid exited with exit code 0
+2014-12-14 15:04:25,380 미세 hadoop.security.Groups.<init> main | Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2014-12-14 15:04:25,385 미세 hadoop.security.UserGroupInformation.login main | hadoop login
+2014-12-14 15:04:25,387 미세 hadoop.security.UserGroupInformation.commit main | hadoop login commit
+2014-12-14 15:04:25,392 미세 hadoop.security.UserGroupInformation.commit main | using local user:UnixPrincipal: puppybit
+2014-12-14 15:04:25,394 미세 hadoop.security.UserGroupInformation.loginUserFromSubject main | UGI loginUser:puppybit (auth:SIMPLE)
+2014-12-14 15:04:25,551 미세 hadoop.hdfs.BlockReaderLocal.<init> main | dfs.client.use.legacy.blockreader.local = false
+2014-12-14 15:04:25,552 미세 hadoop.hdfs.BlockReaderLocal.<init> main | dfs.client.read.shortcircuit = false
+2014-12-14 15:04:25,553 미세 hadoop.hdfs.BlockReaderLocal.<init> main | dfs.client.domain.socket.data.traffic = false
+2014-12-14 15:04:25,553 미세 hadoop.hdfs.BlockReaderLocal.<init> main | dfs.domain.socket.path = 
+2014-12-14 15:04:25,620 미세 hadoop.io.retry.RetryUtils.getDefaultRetryPolicy main | multipleLinearRandomRetry = null
+2014-12-14 15:04:25,641 미세 hadoop.ipc.Server.registerProtocolEngine main | rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@6afff988
+2014-12-14 15:04:25,647 미세 hadoop.ipc.Client.getClient main | getting client out of cache: org.apache.hadoop.ipc.Client@50ed3bb2
+2014-12-14 15:04:25,991 미세 hadoop.hdfs.BlockReaderLocal.<init> main | Both short-circuit local reads and UNIX domain socket are disabled.
+2014-12-14 15:04:26,011 미세 hadoop.mapred.FileInputFormat.listStatus main | Time taken to get FileStatuses: 4
+2014-12-14 15:04:26,012 정보 hadoop.mapred.FileInputFormat.listStatus main | Total input paths to process : 1
+2014-12-14 15:04:26,017 미세 hadoop.mapred.FileInputFormat.getSplits main | Total # of splits generated by getSplits: 4, TimeTaken: 11
+2014-12-14 15:04:26,018 가장 미세 reef.io.data.loading.impl.InputFormatLoadingService.<init> main | Splits: [file:/home/puppybit/Workspace/reef-pregel/bin/dataset:0+81, file:/home/puppybit/Workspace/reef-pregel/bin/dataset:81+81, file:/home/puppybit/Workspace/reef-pregel/bin/dataset:162+81, file:/home/puppybit/Workspace/reef-pregel/bin/dataset:243+82]
+2014-12-14 15:04:26,018 미세 reef.io.data.loading.impl.InputFormatLoadingService.<init> main | Number of partitions: 4
+2014-12-14 15:04:26,020 미세 reef.io.data.loading.impl.EvaluatorToPartitionMapper.<init> main | Processing split: 0
+2014-12-14 15:04:26,020 미세 reef.io.data.loading.impl.EvaluatorToPartitionMapper.<init> main | Processing split: 1
+2014-12-14 15:04:26,021 미세 reef.io.data.loading.impl.EvaluatorToPartitionMapper.<init> main | Processing split: 2
+2014-12-14 15:04:26,021 미세 reef.io.data.loading.impl.EvaluatorToPartitionMapper.<init> main | Processing split: 3
+2014-12-14 15:04:26,022 미세 reef.io.data.loading.impl.EvaluatorToPartitionMapper.<init> main | localhost: [InputSplit-0, InputSplit-1, InputSplit-2, InputSplit-3]
+2014-12-14 15:04:26,025 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.SingleThreadStage@7aa21ce7
+2014-12-14 15:04:26,031 미세 reef.io.data.loading.api.ResourceRequestHandler.onNext SingleThreadStage<org.apache.reef.io.data.loading.api.ResourceRequestHandler> | Processing a request with count: 1 - Waiting for gate to be released
+2014-12-14 15:04:26,032 미세 reef.runtime.common.driver.DriverStartHandler.<init> main | Instantiated `DriverStartHandler with StartHandler [[org.apache.reef.io.data.loading.api.DataLoader$StartHandler@57bc6ffa]] and no RestartHandler
+2014-12-14 15:04:26,045 심각 reef.runtime.common.launch.REEFErrorHandler.onNext main | Uncaught exception.
+java.lang.Exception: Unable to instantiate the clock
+	at org.apache.reef.runtime.common.launch.LaunchClass.fail(LaunchClass.java:182)
+	at org.apache.reef.runtime.common.launch.LaunchClass.getClock(LaunchClass.java:149)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+Caused by: java.lang.RuntimeException: org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [
+org.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [
+No known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler
+]
+]
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:127)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.runtime.common.launch.LaunchClass.getClock(LaunchClass.java:147)
+	... 2 more
+Caused by: org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [
+org.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [
+No known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler
+]
+]
+	at org.apache.reef.tang.implementation.java.InjectorImpl.injectFromPlan(InjectorImpl.java:594)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:513)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	... 32 more
+
+2014-12-14 15:04:26,046 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.getHandler main | RemoteManager: REEF_LAUNCHER destinationIdentifier: socket://192.168.0.12:13712 messageType: org.apache.reef.proto.ReefServiceProtos$RuntimeErrorProto
+2014-12-14 15:04:26,047 미세 reef.wake.remote.impl.ProxyEventHandler.<init> main | ProxyEventHandler myId: socket://192.168.0.12:15742 remoteId: socket://192.168.0.12:13712 remoteSink: default handler: org.apache.reef.wake.remote.impl.RemoteSenderEventHandler@7cb60018
+2014-12-14 15:04:26,163 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:13712
+name: "reef"
+message: "Unable to instantiate the clock"
+exception: "\254\355\000\005sr\000\023java.lang.Exception\320\375\037>\032;\034\304\002\000\000xr\000\023java.lang.Throwable\325\3065\'9w\270\313\003\000\004L\000\005causet\000\025Ljava/lang/Throwable;L\000\rdetailMessaget\000\022Ljava/lang/String;[\000\nstackTracet\000\036[Ljava/lang/StackTraceElement;L\000\024suppressedExceptionst\000\020Ljava/util/List;xpsr\000\032java.lang.RuntimeException\236_\006G\n4\203\345\002\000\000xq\000~\000\000sr\0002org.apache.reef.tang.exceptions.InjectionException\000\000\000\000\000\000\000\001\002\000\000xq\000~\000\000q\000~\000\nt\001fCannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]ur\000\036[Ljava.lang.StackTraceElement;\002F*<<\375\"9\002\000\000xp\000\000\000$sr\000\033java.lang.StackTraceElementa\t\305\232&6\335\205\002\000\004I\000\nlineNumberL\000\016declaringClassq\000~\000\003L\000\bfileNameq\000~\000\003L\000\nmethodNameq\000~\000\003xp\000\000\002Rt\0005org.apache.reef.tang.implementation.java.InjectorImplt\000\021InjectorImpl.javat\000\016injectFromPlansq\000~\000\016\000\000\002\001q\000~\000\020q\000~\000\021t\000\vgetInstancesq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021t\000\020getNamedInstancesq\000~\000\016\000\000\000tt\000$org.apache.reef.tang.InjectionFuturet\000\024InjectionFuture.javat\000\003getsq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000\223t\0001org.apache.reef.runtime.common.launch.LaunchClasst\000\020LaunchClass.javat\000\bgetClocksq\000~\000\016\000\000\000\242q\000~\0009q\000~\000:t\000\003runsq\000~\000\016\000\000\000ot\000\'org.apache.reef.runtime.common.Launchert\000\rLauncher.javat\000\004mainsr\000&java.util.Collections$UnmodifiableList\374\017%1\265\354\216\020\002\000\001L\000\004listq\000~\000\005xr\000,java.util.Collections$UnmodifiableCollection\031B\000\200\313^\367\036\002\000\001L\000\001ct\000\026Ljava/util/Collection;xpsr\000\023java.util.ArrayListx\201\322\035\231\307a\235\003\000\001I\000\004sizexp\000\000\000\000w\004\000\000\000\000xq\000~\000Gxt\001\232org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]uq\000~\000\f\000\000\000!sq\000~\000\016\000\000\000q\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000\223q\000~\0009q\000~\000:q\000~\000;sq\000~\000\016\000\000\000\242q\000~\0009q\000~\000:q\000~\000=sq\000~\000\016\000\000\000oq\000~\000?q\000~\000@q\000~\000Aq\000~\000Ext\000\037Unable to instantiate the clockuq\000~\000\f\000\000\000\004sq\000~\000\016\000\000\000\266q\000~\0009q\000~\000:t\000\004failsq\000~\000\016\000\000\000\225q\000~\0009q\000~\000:q\000~\000;sq\000~\000\016\000\000\000\242q\000~\0009q\000~\000:q\000~\000=sq\000~\000\016\000\000\000oq\000~\000?q\000~\000@q\000~\000Aq\000~\000Ex"
+identifier: "Pregel"
+
+2014-12-14 15:04:26,166 심각 reef.runtime.common.launch.REEFErrorHandler.onNext main | Uncaught exception.
+java.lang.Exception: Fatal exception while executing the clock
+	at org.apache.reef.runtime.common.launch.LaunchClass.fail(LaunchClass.java:182)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:164)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+Caused by: java.lang.RuntimeException: Unable to instantiate the clock
+	at org.apache.reef.runtime.common.launch.LaunchClass.getClock(LaunchClass.java:150)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	... 1 more
+Caused by: java.lang.RuntimeException: org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [
+org.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [
+No known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler
+]
+]
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:127)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:118)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:519)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:531)
+	at org.apache.reef.runtime.common.launch.LaunchClass.getClock(LaunchClass.java:147)
+	... 2 more
+Caused by: org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [
+org.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [
+No known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler
+]
+]
+	at org.apache.reef.tang.implementation.java.InjectorImpl.injectFromPlan(InjectorImpl.java:594)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getInstance(InjectorImpl.java:513)
+	at org.apache.reef.tang.implementation.java.InjectorImpl.getNamedInstance(InjectorImpl.java:544)
+	at org.apache.reef.tang.InjectionFuture.get(InjectionFuture.java:116)
+	... 32 more
+
+2014-12-14 15:04:26,166 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | No cached link for /192.168.0.12:13712 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1,5,main]
+2014-12-14 15:04:26,167 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.getHandler main | RemoteManager: REEF_LAUNCHER destinationIdentifier: socket://192.168.0.12:13712 messageType: org.apache.reef.proto.ReefServiceProtos$RuntimeErrorProto
+2014-12-14 15:04:26,168 미세 reef.wake.remote.impl.ProxyEventHandler.<init> main | ProxyEventHandler myId: socket://192.168.0.12:15742 remoteId: socket://192.168.0.12:13712 remoteSink: default handler: org.apache.reef.wake.remote.impl.RemoteSenderEventHandler@6953609d
+2014-12-14 15:04:26,174 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:13712
+name: "reef"
+message: "Fatal exception while executing the clock"
+exception: "\254\355\000\005sr\000\023java.lang.Exception\320\375\037>\032;\034\304\002\000\000xr\000\023java.lang.Throwable\325\3065\'9w\270\313\003\000\004L\000\005causet\000\025Ljava/lang/Throwable;L\000\rdetailMessaget\000\022Ljava/lang/String;[\000\nstackTracet\000\036[Ljava/lang/StackTraceElement;L\000\024suppressedExceptionst\000\020Ljava/util/List;xpsr\000\032java.lang.RuntimeException\236_\006G\n4\203\345\002\000\000xq\000~\000\000sq\000~\000\asr\0002org.apache.reef.tang.exceptions.InjectionException\000\000\000\000\000\000\000\001\002\000\000xq\000~\000\000q\000~\000\vt\001fCannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]ur\000\036[Ljava.lang.StackTraceElement;\002F*<<\375\"9\002\000\000xp\000\000\000$sr\000\033java.lang.StackTraceElementa\t\305\232&6\335\205\002\000\004I\000\nlineNumberL\000\016declaringClassq\000~\000\003L\000\bfileNameq\000~\000\003L\000\nmethodNameq\000~\000\003xp\000\000\002Rt\0005org.apache.reef.tang.implementation.java.InjectorImplt\000\021InjectorImpl.javat\000\016injectFromPlansq\000~\000\017\000\000\002\001q\000~\000\021q\000~\000\022t\000\vgetInstancesq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022t\000\020getNamedInstancesq\000~\000\017\000\000\000tt\000$org.apache.reef.tang.InjectionFuturet\000\024InjectionFuture.javat\000\003getsq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000\223t\0001org.apache.reef.runtime.common.launch.LaunchClasst\000\020LaunchClass.javat\000\bgetClocksq\000~\000\017\000\000\000\242q\000~\000:q\000~\000;t\000\003runsq\000~\000\017\000\000\000ot\000\'org.apache.reef.runtime.common.Launchert\000\rLauncher.javat\000\004mainsr\000&java.util.Collections$UnmodifiableList\374\017%1\265\354\216\020\002\000\001L\000\004listq\000~\000\005xr\000,java.util.Collections$UnmodifiableCollection\031B\000\200\313^\367\036\002\000\001L\000\001ct\000\026Ljava/util/Collection;xpsr\000\023java.util.ArrayListx\201\322\035\231\307a\235\003\000\001I\000\004sizexp\000\000\000\000w\004\000\000\000\000xq\000~\000Hxt\001\232org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]uq\000~\000\r\000\000\000!sq\000~\000\017\000\000\000q\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000\223q\000~\000:q\000~\000;q\000~\000<sq\000~\000\017\000\000\000\242q\000~\000:q\000~\000;q\000~\000>sq\000~\000\017\000\000\000oq\000~\000@q\000~\000Aq\000~\000Bq\000~\000Fxt\000\037Unable to instantiate the clockuq\000~\000\r\000\000\000\003sq\000~\000\017\000\000\000\226q\000~\000:q\000~\000;q\000~\000<sq\000~\000\017\000\000\000\242q\000~\000:q\000~\000;q\000~\000>sq\000~\000\017\000\000\000oq\000~\000@q\000~\000Aq\000~\000Bq\000~\000Fxt\000)Fatal exception while executing the clockuq\000~\000\r\000\000\000\003sq\000~\000\017\000\000\000\266q\000~\000:q\000~\000;t\000\004failsq\000~\000\017\000\000\000\244q\000~\000:q\000~\000;q\000~\000>sq\000~\000\017\000\000\000oq\000~\000@q\000~\000Aq\000~\000Bq\000~\000Fx"
+identifier: "Pregel"
+
+2014-12-14 15:04:26,179 보다 미세 reef.runtime.common.launch.LaunchClass.run main | RETURN Clock terminated
+2014-12-14 15:04:26,180 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Link null for /192.168.0.12:13712 found
+2014-12-14 15:04:26,181 미세 reef.runtime.common.Launcher.main main | Launcher exiting
+2014-12-14 15:04:26,182 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | No cached link for /192.168.0.12:13712 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2,5,main]
+2014-12-14 15:04:26,183 보다 미세 reef.runtime.common.launch.LaunchClass.close main | ENTRY
+2014-12-14 15:04:26,184 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.close main | RemoteManager: REEF_LAUNCHER Closing remote manager id: socket://192.168.0.12:15742
+2014-12-14 15:04:26,185 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation$1.run pool-4-thread-1 | Closing sender stage socket://192.168.0.12:15742
+2014-12-14 15:04:26,186 미세 reef.wake.remote.impl.RemoteSenderStage.close pool-4-thread-1 | close org.apache.reef.wake.remote.transport.netty.NettyMessagingTransport@626495c2
+2014-12-14 15:04:26,199 가장 미세 reef.wake.remote.transport.netty.NettyClientEventListener.channelActive org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-1 | io.netty.channel.DefaultChannelHandlerContext@12559336
+2014-12-14 15:04:26,200 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1,5,main] link localAddr: /192.168.0.12:53117 remoteAddr: /192.168.0.12:13712
+2014-12-14 15:04:26,201 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2,5,main] link localAddr: /192.168.0.12:53117 remoteAddr: /192.168.0.12:13712
+2014-12-14 15:04:26,202 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | RemoteEvent localAddr=/192.168.0.12:15742 remoteAddr=/192.168.0.12:13712 sourceName= sinkName=default seq=0 event=name: "reef"
+message: "Unable to instantiate the clock"
+exception: "\254\355\000\005sr\000\023java.lang.Exception\320\375\037>\032;\034\304\002\000\000xr\000\023java.lang.Throwable\325\3065\'9w\270\313\003\000\004L\000\005causet\000\025Ljava/lang/Throwable;L\000\rdetailMessaget\000\022Ljava/lang/String;[\000\nstackTracet\000\036[Ljava/lang/StackTraceElement;L\000\024suppressedExceptionst\000\020Ljava/util/List;xpsr\000\032java.lang.RuntimeException\236_\006G\n4\203\345\002\000\000xq\000~\000\000sr\0002org.apache.reef.tang.exceptions.InjectionException\000\000\000\000\000\000\000\001\002\000\000xq\000~\000\000q\000~\000\nt\001fCannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]ur\000\036[Ljava.lang.StackTraceElement;\002F*<<\375\"9\002\000\000xp\000\000\000$sr\000\033java.lang.StackTraceElementa\t\305\232&6\335\205\002\000\004I\000\nlineNumberL\000\016declaringClassq\000~\000\003L\000\bfileNameq\000~\000\003L\000\nmethodNameq\000~\000\003xp\000\000\002Rt\0005org.apache.reef.tang.implementation.java.InjectorImplt\000\021InjectorImpl.javat\000\016injectFromPlansq\000~\000\016\000\000\002\001q\000~\000\020q\000~\000\021t\000\vgetInstancesq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021t\000\020getNamedInstancesq\000~\000\016\000\000\000tt\000$org.apache.reef.tang.InjectionFuturet\000\024InjectionFuture.javat\000\003getsq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000\223t\0001org.apache.reef.runtime.common.launch.LaunchClasst\000\020LaunchClass.javat\000\bgetClocksq\000~\000\016\000\000\000\242q\000~\0009q\000~\000:t\000\003runsq\000~\000\016\000\000\000ot\000\'org.apache.reef.runtime.common.Launchert\000\rLauncher.javat\000\004mainsr\000&java.util.Collections$UnmodifiableList\374\017%1\265\354\216\020\002\000\001L\000\004listq\000~\000\005xr\000,java.util.Collections$UnmodifiableCollection\031B\000\200\313^\367\036\002\000\001L\000\001ct\000\026Ljava/util/Collection;xpsr\000\023java.util.ArrayListx\201\322\035\231\307a\235\003\000\001I\000\004sizexp\000\000\000\000w\004\000\000\000\000xq\000~\000Gxt\001\232org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]uq\000~\000\f\000\000\000!sq\000~\000\016\000\000\000q\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000vq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002 q\000~\000\020q\000~\000\021q\000~\000\026sq\000~\000\016\000\000\000tq\000~\000\030q\000~\000\031q\000~\000\032sq\000~\000\016\000\000\002\aq\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\002\023q\000~\000\020q\000~\000\021q\000~\000\024sq\000~\000\016\000\000\000\223q\000~\0009q\000~\000:q\000~\000;sq\000~\000\016\000\000\000\242q\000~\0009q\000~\000:q\000~\000=sq\000~\000\016\000\000\000oq\000~\000?q\000~\000@q\000~\000Aq\000~\000Ext\000\037Unable to instantiate the clockuq\000~\000\f\000\000\000\004sq\000~\000\016\000\000\000\266q\000~\0009q\000~\000:t\000\004failsq\000~\000\016\000\000\000\225q\000~\0009q\000~\000:q\000~\000;sq\000~\000\016\000\000\000\242q\000~\0009q\000~\000:q\000~\000=sq\000~\000\016\000\000\000oq\000~\000?q\000~\000@q\000~\000Aq\000~\000Ex"
+identifier: "Pregel"
+
+2014-12-14 15:04:26,207 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | RemoteEvent localAddr=/192.168.0.12:15742 remoteAddr=/192.168.0.12:13712 sourceName= sinkName=default seq=1 event=name: "reef"
+message: "Fatal exception while executing the clock"
+exception: "\254\355\000\005sr\000\023java.lang.Exception\320\375\037>\032;\034\304\002\000\000xr\000\023java.lang.Throwable\325\3065\'9w\270\313\003\000\004L\000\005causet\000\025Ljava/lang/Throwable;L\000\rdetailMessaget\000\022Ljava/lang/String;[\000\nstackTracet\000\036[Ljava/lang/StackTraceElement;L\000\024suppressedExceptionst\000\020Ljava/util/List;xpsr\000\032java.lang.RuntimeException\236_\006G\n4\203\345\002\000\000xq\000~\000\000sq\000~\000\asr\0002org.apache.reef.tang.exceptions.InjectionException\000\000\000\000\000\000\000\001\002\000\000xq\000~\000\000q\000~\000\vt\001fCannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]ur\000\036[Ljava.lang.StackTraceElement;\002F*<<\375\"9\002\000\000xp\000\000\000$sr\000\033java.lang.StackTraceElementa\t\305\232&6\335\205\002\000\004I\000\nlineNumberL\000\016declaringClassq\000~\000\003L\000\bfileNameq\000~\000\003L\000\nmethodNameq\000~\000\003xp\000\000\002Rt\0005org.apache.reef.tang.implementation.java.InjectorImplt\000\021InjectorImpl.javat\000\016injectFromPlansq\000~\000\017\000\000\002\001q\000~\000\021q\000~\000\022t\000\vgetInstancesq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022t\000\020getNamedInstancesq\000~\000\017\000\000\000tt\000$org.apache.reef.tang.InjectionFuturet\000\024InjectionFuture.javat\000\003getsq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000\223t\0001org.apache.reef.runtime.common.launch.LaunchClasst\000\020LaunchClass.javat\000\bgetClocksq\000~\000\017\000\000\000\242q\000~\000:q\000~\000;t\000\003runsq\000~\000\017\000\000\000ot\000\'org.apache.reef.runtime.common.Launchert\000\rLauncher.javat\000\004mainsr\000&java.util.Collections$UnmodifiableList\374\017%1\265\354\216\020\002\000\001L\000\004listq\000~\000\005xr\000,java.util.Collections$UnmodifiableCollection\031B\000\200\313^\367\036\002\000\001L\000\001ct\000\026Ljava/util/Collection;xpsr\000\023java.util.ArrayListx\201\322\035\231\307a\235\003\000\001I\000\004sizexp\000\000\000\000w\004\000\000\000\000xq\000~\000Hxt\001\232org.apache.reef.tang.exceptions.InjectionException: Cannot inject org.apache.reef.wake.time.Clock$RuntimeStartHandler: org.apache.reef.wake.time.Clock$RuntimeStartHandler(set) includes infeasible plans [\norg.apache.reef.driver.parameters.ContextActiveHandlers(set) includes infeasible plans [\nNo known implementations / injectable constructors for edu.snu.bdcs.reef.pregel.PregelDriver$ActiveContextHandler\n]\n]uq\000~\000\r\000\000\000!sq\000~\000\017\000\000\000q\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000vq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002 q\000~\000\021q\000~\000\022q\000~\000\027sq\000~\000\017\000\000\000tq\000~\000\031q\000~\000\032q\000~\000\033sq\000~\000\017\000\000\002\aq\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\002\023q\000~\000\021q\000~\000\022q\000~\000\025sq\000~\000\017\000\000\000\223q\000~\000:q\000~\000;q\000~\000<sq\000~\000\017\000\000\000\242q\000~\000:q\000~\000;q\000~\000>sq\000~\000\017\000\000\000oq\000~\000@q\000~\000Aq\000~\000Bq\000~\000Fxt\000\037Unable to instantiate the clockuq\000~\000\r\000\000\000\003sq\000~\000\017\000\000\000\226q\000~\000:q\000~\000;q\000~\000<sq\000~\000\017\000\000\000\242q\000~\000:q\000~\000;q\000~\000>sq\000~\000\017\000\000\000oq\000~\000@q\000~\000Aq\000~\000Bq\000~\000Fxt\000)Fatal exception while executing the clockuq\000~\000\r\000\000\000\003sq\000~\000\017\000\000\000\266q\000~\000:q\000~\000;t\000\004failsq\000~\000\017\000\000\000\244q\000~\000:q\000~\000;q\000~\000>sq\000~\000\017\000\000\000oq\000~\000@q\000~\000Aq\000~\000Bq\000~\000Fx"
+identifier: "Pregel"
+
+2014-12-14 15:04:26,247 가장 미세 reef.wake.remote.transport.netty.NettyLink.write org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | write [id: 0x36a0a687, /192.168.0.12:53117 => /192.168.0.12:13712] [B@2fc27a2e
+2014-12-14 15:04:26,249 가장 미세 reef.wake.remote.transport.netty.NettyLink.write org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | write [id: 0x36a0a687, /192.168.0.12:53117 => /192.168.0.12:13712] [B@8e37a81
+2014-12-14 15:04:26,265 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation$1.run pool-4-thread-1 | Closed the remote sender stage
+2014-12-14 15:04:26,266 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation$1.run pool-4-thread-1 | Closing transport socket://192.168.0.12:15742
+2014-12-14 15:04:26,266 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.close pool-4-thread-1 | Closing netty transport socket address: /192.168.0.12:15742
+2014-12-14 15:04:26,283 보다 미세 reef.wake.remote.transport.netty.AbstractNettyEventListener.closeChannel org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-1 | Channel closed: [id: 0x36a0a687, /192.168.0.12:53117 :> /192.168.0.12:13712]. Link ref found and removed: true
+2014-12-14 15:04:26,288 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.close pool-4-thread-1 | Closing netty transport socket address: /192.168.0.12:15742 done
+2014-12-14 15:04:26,289 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation$1.run pool-4-thread-1 | Closed the transport
+2014-12-14 15:04:26,289 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation$1.run pool-4-thread-1 | Closing receiver stage socket://192.168.0.12:15742
+2014-12-14 15:04:26,290 미세 reef.wake.remote.impl.OrderedRemoteReceiverStage.close pool-4-thread-1 | close
+2014-12-14 15:04:26,290 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation$1.run pool-4-thread-1 | Closed the remote receiver stage
+2014-12-14 15:04:26,291 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.close main | Close executor terminated properly.
+2014-12-14 15:04:26,291 보다 미세 reef.runtime.common.launch.LaunchClass.close main | RETURN
+2014-12-14 15:04:26,292 정보 reef.runtime.common.Launcher.main main | Exiting Launcher.main()
+2014-12-14 15:04:26,294 가장 미세 reef.runtime.common.Launcher.main main | Threads running after Launcher.close():
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-5':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-4':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'Reference Handler':
+		java.lang.Object.wait(Native Method)
+		java.lang.Object.wait(Object.java:503)
+		java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-7':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-11':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-10':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-20':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerBoss-pool-3-thread-1':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-8':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-18':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-2':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-2':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'Signal Dispatcher':
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-13':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-7':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-4':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-9':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'Finalizer':
+		java.lang.Object.wait(Native Method)
+		java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+		java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+		java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-1':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-1':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-17':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-3':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'main':
+		java.lang.Thread.dumpThreads(Native Method)
+		java.lang.Thread.getAllStackTraces(Thread.java:1640)
+		org.apache.reef.util.ThreadLogger.getFormattedThreadList(ThreadLogger.java:70)
+		org.apache.reef.util.ThreadLogger.getFormattedThreadList(ThreadLogger.java:83)
+		org.apache.reef.runtime.common.Launcher.main(Launcher.java:119)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-5':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-15':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerBoss-pool-3-thread-2':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-6':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'SingleThreadStage<org.apache.reef.io.data.loading.api.ResourceRequestHandler>':
+		sun.misc.Unsafe.park(Native Method)
+		java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+		java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:834)
+		java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:994)
+		java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1303)
+		java.util.concurrent.CountDownLatch.await(CountDownLatch.java:236)
+		org.apache.reef.io.data.loading.api.ResourceRequestHandler.onNext(ResourceRequestHandler.java:54)
+		org.apache.reef.io.data.loading.api.ResourceRequestHandler.onNext(ResourceRequestHandler.java:29)
+		org.apache.reef.wake.impl.SingleThreadStage$Producer.run(SingleThreadStage.java:128)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-12':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'process reaper':
+		sun.misc.Unsafe.park(Native Method)
+		java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+		java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:359)
+		java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:942)
+		java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+		java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+		java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-8':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-14':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-3':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-6':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-9':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerBoss-pool-3-thread-3':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-10':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-16':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+	Thread 'org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportServerWorker-pool-4-thread-19':
+		java.lang.Thread.sleep(Native Method)
+		io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:662)
+		io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+		io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+		java.lang.Thread.run(Thread.java:745)
+2014-12-14 15:04:26,295 가장 미세 reef.wake.impl.StageManager$1.run Thread-1 | Shutdown hook : closing stages
