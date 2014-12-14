@@ -22,6 +22,7 @@ edu/snu/bdcs/reef/pregel/parameters/Timeout.class
 edu/snu/bdcs/reef/pregel/Inject.class
 edu/snu/bdcs/reef/pregel/PregelDriver$FailedTaskHandler.class
 edu/snu/bdcs/reef/pregel/data/PregelDataParser.class
+edu/snu/bdcs/reef/pregel/PregelComputeTask$1.class
 edu/snu/bdcs/reef/pregel/utils/DataParseService$ContextStartHandler.class
 edu/snu/bdcs/reef/pregel/groupcomm/subs/VertexListReduceFunction.class
 edu/snu/bdcs/reef/pregel/utils/DataParser.class

@@ -55,7 +55,7 @@ public final class PregelComputeTask implements Task{
      */
     private List<Vector> vectorList = new ArrayList<>();
 
-    private List<Vertex> vectexList = new ArrayList<>();
+    private List<Vertex> vertexList = new ArrayList<>();
 
     /**
      * This class is instantiated by TANG
@@ -90,17 +90,38 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
         vectorList = dataParser.get().first;
 
         for (final Vector vector : vectorList){
-            vectexList.add(new Vertex(vector));
+            vertexList.add(new Vertex(vector));
         }
 
 
         // 1. Start Algorithm
 
-        System.out.printf("Test Size %d", vectexList.size());
+        boolean terminate = false;
+        while (!terminate){
 
+            switch (ctrlSyncBroadcast.receive()) {
+                case TERMINATE:
+                    terminate = true;
+                    break;
 
+                case INITIATE:
+                    initialTopoReduce.send(vertexList);
+                    break;
 
+                case COMPUTE:
+                    computePageRank();
+                    break;
 
+                default:
+                    break;
+            }
+        }
         return null;
     }
+
+    private final void computePageRank() throws Exception{
+
+
+    }
+
 }

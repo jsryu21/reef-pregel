@@ -9,8 +9,11 @@ import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.InitialTopoReduce;
 import edu.snu.bdcs.reef.pregel.parameters.ControlMessage;
+import edu.snu.bdcs.reef.pregel.parameters.MaxSuperSteps;
+import org.apache.reef.tang.annotations.Parameter;
 import org.apache.reef.task.Task;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -46,23 +49,28 @@ public final class PregelControllerTask implements Task{
 
     private final Broadcast.Sender<ControlMessage> ctrlMsgBroadcast;
 
+    private final int maxSuperSteps;
+
     /**
      * This class is instantiated by TANG
      *
      * Constructs the Controller Task for k-means
      *
      * @param groupCommClient accessor for retrieving communicator members for Group Communication
+     * @param maxSteps maximum number of superstpes
      */
 
 
     @Inject
-    public PregelControllerTask(final GroupCommClient groupCommClient){
+    public PregelControllerTask(final GroupCommClient groupCommClient,
+                                @Parameter(MaxSuperSteps.class) final int maxSteps){
 
         super();
 
         this.communicationGroupClient = groupCommClient.getCommunicationGroup(CommunicationGroup.class);
         this.initialTopologyReduce = communicationGroupClient.getReduceReceiver(InitialTopoReduce.class);
         this.ctrlMsgBroadcast = communicationGroupClient.getBroadcastSender(CtrlSyncBroadcast.class);
+        this.maxSuperSteps = maxSteps;
 
     }
 
@@ -73,7 +81,12 @@ public final class PregelControllerTask implements Task{
         LOG.log(Level.INFO, "ControllerTask.call() commencing....");
 
 
+        ctrlMsgBroadcast.send(ControlMessage.INITIATE);
+        final List<Vertex> allVertexList = initialTopologyReduce.reduce();
 
+        LOG.log(Level.SEVERE, "Debug1 finished!!!!");
+
+        ctrlMsgBroadcast.send(ControlMessage.TERMINATE);
 
         return null;
     }

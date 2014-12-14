@@ -5,12 +5,10 @@ import com.microsoft.reef.io.network.nggroup.api.driver.GroupCommDriver;
 import com.microsoft.reef.io.network.nggroup.impl.config.BroadcastOperatorSpec;
 import com.microsoft.reef.io.network.nggroup.impl.config.ReduceOperatorSpec;
 import edu.snu.bdcs.reef.pregel.data.PregelDataParser;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.InitialTopoReduce;
-import edu.snu.bdcs.reef.pregel.groupcomm.subs.VertexListCodec;
-import edu.snu.bdcs.reef.pregel.groupcomm.subs.VertexListReduceFunction;
+import edu.snu.bdcs.reef.pregel.groupcomm.names.*;
+import edu.snu.bdcs.reef.pregel.groupcomm.subs.*;
 import edu.snu.bdcs.reef.pregel.parameters.PregelParameters;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
+import edu.snu.bdcs.reef.pregel.data.PregelDataParser;
 import edu.snu.bdcs.reef.pregel.utils.DataParseService;
 import org.apache.reef.driver.context.ActiveContext;
 import org.apache.reef.driver.evaluator.EvaluatorRequestor;
@@ -23,6 +21,7 @@ import org.apache.reef.tang.Configuration;
 import org.apache.reef.tang.Configurations;
 import org.apache.reef.tang.Injector;
 import org.apache.reef.tang.Tang;
+import org.apache.reef.tang.annotations.Unit;
 import org.apache.reef.tang.exceptions.InjectionException;
 import org.apache.reef.wake.EventHandler;
 
@@ -37,7 +36,7 @@ import java.util.logging.Logger;
  * Scatter and Reduce operations for Group Communication.
  */
 
-
+@Unit
 public final class PregelDriver {
     private final static Logger LOG = Logger.getLogger(PregelDriver.class.getName());
 
@@ -125,7 +124,6 @@ public final class PregelDriver {
     }
 
     final class ActiveContextHandler implements EventHandler<ActiveContext> {
-
         @Override
         public void onNext(final ActiveContext activeContext) {
 
