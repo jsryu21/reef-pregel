@@ -169,7 +169,7 @@ public final class PregelDriver {
 
                 commGroup.addTask(partialTaskConf);
                 final Configuration finalTaskConf = groupCommDriver.getTaskConfiguration(partialTaskConf);
-                activeContext.submitContext(finalTaskConf);
+                activeContext.submitTask(finalTaskConf);
             }
         }
     }
