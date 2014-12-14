@@ -1,0 +1,29 @@
+2014-12-14 19:05:02,430 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Using SLF4J as the default logging framework
+2014-12-14 19:05:02,451 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main java.nio.Buffer.address: available
+2014-12-14 19:05:02,452 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main sun.misc.Unsafe.theUnsafe: available
+2014-12-14 19:05:02,452 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main sun.misc.Unsafe.copyMemory: available
+2014-12-14 19:05:02,453 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main java.nio.Bits.unaligned: true
+2014-12-14 19:05:02,465 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main UID: 1000
+2014-12-14 19:05:02,466 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Java version: 7
+2014-12-14 19:05:02,466 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noUnsafe: false
+2014-12-14 19:05:02,466 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main sun.misc.Unsafe: available
+2014-12-14 19:05:02,467 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noJavassist: false
+2014-12-14 19:05:02,582 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Javassist: available
+2014-12-14 19:05:02,582 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+2014-12-14 19:05:02,582 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2014-12-14 19:05:02,582 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noPreferDirect: false
+2014-12-14 19:05:02,605 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.eventLoopThreads: 8
+2014-12-14 19:05:02,613 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noKeySetOptimization: false
+2014-12-14 19:05:02,615 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.selectorAutoRebuildThreshold: 512
+2014-12-14 19:05:05,655 WARN io.netty.util.internal.logging.Slf4JLogger warn main Failed to generate a seed from SecureRandom within 3 seconds. Not enough entrophy?
+2014-12-14 19:05:05,656 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.initialSeedUniquifier: 0xde7d2324dfbae119
+2014-12-14 19:05:05,670 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.threadLocalDirectBufferSize: 65536
+2014-12-14 19:05:05,672 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.recycler.maxCapacity.default: 262144
+2014-12-14 19:05:05,703 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.allocator.type: unpooled
+2014-12-14 19:05:05,705 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Loopback interface: lo (lo, 127.0.0.1)
+2014-12-14 19:05:05,705 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main /proc/sys/net/core/somaxconn: 128
+2014-12-14 19:05:06,894 DEBUG org.apache.hadoop.security.authentication.util.KerberosName <clinit> main Kerberos krb5 configuration not found, setting default realm to empty
+2014-12-14 19:05:08,062 DEBUG io.netty.util.internal.logging.Slf4JLogger debug org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-1 Generated: io.netty.util.internal.__matchers__.io.netty.buffer.ByteBufMatcher
+2014-12-14 19:05:08,066 DEBUG io.netty.util.internal.logging.Slf4JLogger debug org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-1 Generated: io.netty.util.internal.__matchers__.byte[]Matcher
+2014-12-14 19:05:08,112 DEBUG io.netty.util.internal.logging.Slf4JLogger debug org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 -Dio.netty.leakDetectionLevel: simple
+2014-12-14 19:05:08,125 DEBUG io.netty.util.internal.logging.Slf4JLogger debug org.apache.reef.wake.remote.transport.netty.NettyMessagingTransportClientWorker-pool-5-thread-1 java.nio.ByteBuffer.cleaner(): available

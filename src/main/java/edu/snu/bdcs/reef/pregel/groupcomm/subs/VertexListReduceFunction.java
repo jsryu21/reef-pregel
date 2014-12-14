@@ -1,9 +1,9 @@
 package edu.snu.bdcs.reef.pregel.groupcomm.subs;
 
 import com.microsoft.reef.io.network.group.operators.Reduce;
-import edu.snu.bdcs.reef.pregel.Inject;
 import edu.snu.bdcs.reef.pregel.data.Vertex;
 
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 

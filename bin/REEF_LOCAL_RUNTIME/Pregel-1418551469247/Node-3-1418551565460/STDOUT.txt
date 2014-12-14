@@ -1,0 +1,24 @@
+2014-12-14 19:06:05,927 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Using SLF4J as the default logging framework
+2014-12-14 19:06:05,939 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main java.nio.Buffer.address: available
+2014-12-14 19:06:05,940 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main sun.misc.Unsafe.theUnsafe: available
+2014-12-14 19:06:05,940 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main sun.misc.Unsafe.copyMemory: available
+2014-12-14 19:06:05,941 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main java.nio.Bits.unaligned: true
+2014-12-14 19:06:05,947 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main UID: 1000
+2014-12-14 19:06:05,948 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Java version: 7
+2014-12-14 19:06:05,949 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noUnsafe: false
+2014-12-14 19:06:05,949 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main sun.misc.Unsafe: available
+2014-12-14 19:06:05,950 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noJavassist: false
+2014-12-14 19:06:06,050 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Javassist: available
+2014-12-14 19:06:06,051 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+2014-12-14 19:06:06,051 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2014-12-14 19:06:06,051 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noPreferDirect: false
+2014-12-14 19:06:06,077 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.eventLoopThreads: 8
+2014-12-14 19:06:06,085 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.noKeySetOptimization: false
+2014-12-14 19:06:06,087 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.selectorAutoRebuildThreshold: 512
+2014-12-14 19:06:09,118 WARN io.netty.util.internal.logging.Slf4JLogger warn main Failed to generate a seed from SecureRandom within 3 seconds. Not enough entrophy?
+2014-12-14 19:06:09,119 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.initialSeedUniquifier: 0x8e17c9bb91bae119
+2014-12-14 19:06:09,129 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.threadLocalDirectBufferSize: 65536
+2014-12-14 19:06:09,131 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.recycler.maxCapacity.default: 262144
+2014-12-14 19:06:09,163 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main -Dio.netty.allocator.type: unpooled
+2014-12-14 19:06:09,164 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main Loopback interface: lo (lo, 127.0.0.1)
+2014-12-14 19:06:09,165 DEBUG io.netty.util.internal.logging.Slf4JLogger debug main /proc/sys/net/core/somaxconn: 128

@@ -1,0 +1,10 @@
+2014-12-14 19:06:08,358 미세 reef.runtime.common.Launcher.main main | Launcher started with user name [puppybit]
+2014-12-14 19:06:08,421 미세 reef.runtime.common.Launcher.main main | Launcher started. Assertions are DISABLED in this process.
+2014-12-14 19:06:08,641 미세 reef.wake.impl.StageManager.<init> main | StageManager adds a shutdown hook
+2014-12-14 19:06:08,643 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@6a221968
+2014-12-14 19:06:08,647 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@1fa53fac
+2014-12-14 19:06:08,660 미세 reef.wake.remote.NetUtils.getLocalAddress main | Local address is 192.168.0.12
+2014-12-14 19:06:09,032 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Binding to 0
+2014-12-14 19:06:09,034 가장 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Try port 18,482
+2014-12-14 19:06:09,497 가장 미세 reef.wake.impl.StageManager$1.run Thread-1 | Shutdown hook : closing stages
+2014-12-14 19:06:09,498 가장 미세 reef.wake.impl.StageManager.close Thread-1 | Closing org.apache.reef.wake.impl.ThreadPoolStage@6a221968

@@ -1,0 +1,15 @@
+2014-12-14 19:06:05,612 미세 reef.runtime.common.Launcher.main main | Launcher started with user name [puppybit]
+2014-12-14 19:06:05,676 미세 reef.runtime.common.Launcher.main main | Launcher started. Assertions are DISABLED in this process.
+2014-12-14 19:06:05,855 미세 reef.wake.impl.StageManager.<init> main | StageManager adds a shutdown hook
+2014-12-14 19:06:05,856 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@6ec15ff6
+2014-12-14 19:06:05,859 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@38ef87ba
+2014-12-14 19:06:05,867 미세 reef.wake.remote.NetUtils.getLocalAddress main | Local address is 192.168.0.12
+2014-12-14 19:06:06,107 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Binding to 0
+2014-12-14 19:06:06,107 가장 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Try port 16,211
+2014-12-14 19:06:09,177 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Starting netty transport socket address: /192.168.0.12:16211
+2014-12-14 19:06:09,180 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.remote.impl.DefaultRemoteManagerImplementation@304c885c
+2014-12-14 19:06:09,180 가장 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.<init> main | RemoteManager REEF_LAUNCHER instantiated id socket://192.168.0.12:16211 counter 1 listening on /192.168.0.12:16211:16,211
+2014-12-14 19:06:09,181 미세 reef.runtime.common.utils.RemoteManager.<init> main | Instantiated RemoteManager with remoteId: socket://192.168.0.12:16211
+2014-12-14 19:06:09,183 미세 reef.runtime.common.Launcher.main main | Launcher starting
+2014-12-14 19:06:09,184 보다 미세 reef.runtime.common.launch.LaunchClass.run main | ENTRY Starting the clock
+2014-12-14 19:06:09,184 가장 미세 reef.runtime.common.launch.LaunchClass.readConfigurationFromDisk main | Loading configuration file: reef/local/evaluator.conf

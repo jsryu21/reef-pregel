@@ -1,18 +1,16 @@
 package edu.snu.bdcs.reef.pregel;
 
-import com.microsoft.reef.io.network.group.operators.Broadcast;
-import com.microsoft.reef.io.network.group.operators.Reduce;
+import com.microsoft.reef.io.network.group.operators.*;
 import com.microsoft.reef.io.network.nggroup.api.task.CommunicationGroupClient;
 import com.microsoft.reef.io.network.nggroup.api.task.GroupCommClient;
 import edu.snu.bdcs.reef.pregel.data.Vertex;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.InitialTopoReduce;
+import edu.snu.bdcs.reef.pregel.groupcomm.names.*;
 import edu.snu.bdcs.reef.pregel.parameters.ControlMessage;
 import edu.snu.bdcs.reef.pregel.parameters.MaxSuperSteps;
 import org.apache.reef.tang.annotations.Parameter;
 import org.apache.reef.task.Task;
 
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

@@ -8,6 +8,6 @@ import org.apache.reef.tang.annotations.NamedParameter;
 
 @NamedParameter(doc = "Number of splits to read data in",
         short_name = "split",
-        default_value = "4")
+        default_value = "2")
 public final class SplitNum implements Name<Integer> {
 }

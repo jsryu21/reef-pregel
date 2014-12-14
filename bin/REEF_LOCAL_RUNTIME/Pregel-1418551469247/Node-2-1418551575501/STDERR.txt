@@ -1,0 +1,633 @@
+2014-12-14 19:06:16,099 미세 reef.runtime.common.Launcher.main main | Launcher started with user name [puppybit]
+2014-12-14 19:06:16,259 미세 reef.runtime.common.Launcher.main main | Launcher started. Assertions are DISABLED in this process.
+2014-12-14 19:06:16,725 미세 reef.wake.impl.StageManager.<init> main | StageManager adds a shutdown hook
+2014-12-14 19:06:16,726 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@6a221968
+2014-12-14 19:06:16,731 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@1fa53fac
+2014-12-14 19:06:16,748 미세 reef.wake.remote.NetUtils.getLocalAddress main | Local address is 192.168.0.12
+2014-12-14 19:06:17,137 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Binding to 0
+2014-12-14 19:06:17,138 가장 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Try port 10,076
+2014-12-14 19:06:20,221 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Starting netty transport socket address: /192.168.0.12:10076
+2014-12-14 19:06:20,223 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.remote.impl.DefaultRemoteManagerImplementation@1f8326b8
+2014-12-14 19:06:20,223 가장 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.<init> main | RemoteManager REEF_LAUNCHER instantiated id socket://192.168.0.12:10076 counter 1 listening on /192.168.0.12:10076:10,076
+2014-12-14 19:06:20,224 미세 reef.runtime.common.utils.RemoteManager.<init> main | Instantiated RemoteManager with remoteId: socket://192.168.0.12:10076
+2014-12-14 19:06:20,225 미세 reef.runtime.common.Launcher.main main | Launcher starting
+2014-12-14 19:06:20,226 보다 미세 reef.runtime.common.launch.LaunchClass.run main | ENTRY Starting the clock
+2014-12-14 19:06:20,227 가장 미세 reef.runtime.common.launch.LaunchClass.readConfigurationFromDisk main | Loading configuration file: reef/local/evaluator.conf
+2014-12-14 19:06:20,518 미세 reef.wake.time.runtime.RuntimeClock.<init> main | RuntimeClock instantiated.
+2014-12-14 19:06:20,523 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.getHandler main | RemoteManager: REEF_LAUNCHER destinationIdentifier: socket://192.168.0.12:12040 messageType: org.apache.reef.proto.EvaluatorRuntimeProtocol$EvaluatorHeartbeatProto
+2014-12-14 19:06:20,525 미세 reef.wake.remote.impl.ProxyEventHandler.<init> main | ProxyEventHandler myId: socket://192.168.0.12:10076 remoteId: socket://192.168.0.12:12040 remoteSink: default handler: org.apache.reef.wake.remote.impl.RemoteSenderEventHandler@10d65c82
+2014-12-14 19:06:20,529 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.registerHandler main | RemoteManager: REEF_LAUNCHER remoteid: socket://192.168.0.12:12040 messageType: org.apache.reef.proto.EvaluatorRuntimeProtocol$EvaluatorControlProto handler: org.apache.reef.runtime.common.evaluator.EvaluatorRuntime
+2014-12-14 19:06:20,530 보다 미세 reef.wake.remote.impl.HandlerContainer.registerHandler main | socket://192.168.0.12:12040 class org.apache.reef.proto.EvaluatorRuntimeProtocol$EvaluatorControlProto
+2014-12-14 19:06:20,538 보다 미세 reef.wake.time.runtime.RuntimeClock.run main | ENTRY
+2014-12-14 19:06:20,539 미세 reef.wake.time.runtime.RuntimeClock.run main | Subscribe event handlers
+2014-12-14 19:06:20,541 미세 reef.wake.time.runtime.RuntimeClock.run main | Initiate runtime start
+2014-12-14 19:06:20,541 가장 미세 reef.wake.impl.PubSubEventHandler.onNext main | Invoked for event: org.apache.reef.wake.time.runtime.event.RuntimeStart[1418551580541]
+2014-12-14 19:06:20,542 가장 미세 reef.wake.impl.PubSubEventHandler.onNext main | Invoking org.apache.reef.runtime.common.evaluator.EvaluatorRuntime$RuntimeStartHandler@428b2c94
+2014-12-14 19:06:20,542 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime$RuntimeStartHandler.onNext main | runtime start
+2014-12-14 19:06:20,543 가장 미세 reef.runtime.common.evaluator.context.ContextManager.start main | Instantiating root context.
+2014-12-14 19:06:20,551 보다 미세 reef.util.ObjectInstantiationLogger.<init> main | Instantiated
+2014-12-14 19:06:20,569 정보 reef.runtime.common.evaluator.context.defaults.DefaultContextStartHandler.onNext main | DefaultContextStartHandler received: org.apache.reef.runtime.common.evaluator.context.ContextStartImpl@12567513
+2014-12-14 19:06:20,569 가장 미세 reef.runtime.common.evaluator.context.ContextRuntime.<init> main | Instantiating root context
+2014-12-14 19:06:20,570 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:20,610 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:20,694 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551580688
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.EvaluatorRuntime$RuntimeStartHandler.onNext(EvaluatorRuntime.java:176)
+	at org.apache.reef.runtime.common.evaluator.EvaluatorRuntime$RuntimeStartHandler.onNext(EvaluatorRuntime.java:166)
+	at org.apache.reef.wake.impl.PubSubEventHandler.onNext(PubSubEventHandler.java:98)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:187)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:20,695 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551580688
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:20,698 미세 reef.wake.time.runtime.RuntimeClock.run main | Initiate start time
+2014-12-14 19:06:20,698 가장 미세 reef.wake.impl.PubSubEventHandler.onNext main | Invoked for event: org.apache.reef.wake.time.event.StartTime[1418551580698]
+2014-12-14 19:06:20,699 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1,5,main]
+2014-12-14 19:06:20,699 가장 미세 reef.wake.impl.PubSubEventHandler.onNext main | Invoking org.apache.reef.runtime.common.evaluator.PIDStoreStartHandler@7f8f8577
+2014-12-14 19:06:20,704 가장 미세 reef.runtime.common.evaluator.PIDStoreStartHandler.onNext main | Storing pid `5750` in file /home/puppybit/Workspace/reef-pregel/bin/REEF_LOCAL_RUNTIME/Pregel-1418551469247/Node-2-1418551575501/PID.txt
+2014-12-14 19:06:20,706 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:20,732 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | Connection refused. Retry 1 of 3
+2014-12-14 19:06:25,532 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:25,534 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:25,537 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551585536
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:25,540 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551585536
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:25,542 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:25,544 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:25,545 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2,5,main]
+2014-12-14 19:06:25,554 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Connection refused. Retry 1 of 3
+2014-12-14 19:06:30,542 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:30,545 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:30,548 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551590547
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:30,550 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551590547
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:30,552 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:30,554 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:30,556 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3,5,main]
+2014-12-14 19:06:30,565 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | Connection refused. Retry 1 of 3
+2014-12-14 19:06:30,733 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:30,735 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1,5,main]
+2014-12-14 19:06:30,743 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | Connection refused. Retry 2 of 3
+2014-12-14 19:06:35,553 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:35,555 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:35,558 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:35,559 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551595558
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:35,562 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2,5,main]
+2014-12-14 19:06:35,563 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551595558
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:35,567 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:35,568 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Connection refused. Retry 2 of 3
+2014-12-14 19:06:35,568 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:35,569 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4,5,main]
+2014-12-14 19:06:35,572 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | Connection refused. Retry 1 of 3
+2014-12-14 19:06:40,566 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:40,568 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:40,570 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:40,572 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3,5,main]
+2014-12-14 19:06:40,573 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551600572
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:40,578 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551600572
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:40,580 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:40,581 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:40,583 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | Connection refused. Retry 2 of 3
+2014-12-14 19:06:40,585 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5,5,main]
+2014-12-14 19:06:40,589 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | Connection refused. Retry 1 of 3
+2014-12-14 19:06:40,745 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:40,745 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1,5,main]
+2014-12-14 19:06:40,752 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | Connection refused. Retry 3 of 3
+2014-12-14 19:06:45,569 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:45,571 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2,5,main]
+2014-12-14 19:06:45,573 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:45,576 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4,5,main]
+2014-12-14 19:06:45,580 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Connection refused. Retry 3 of 3
+2014-12-14 19:06:45,582 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:45,585 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | Connection refused. Retry 2 of 3
+2014-12-14 19:06:45,587 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:45,597 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551605597
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:45,599 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551605597
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:45,599 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:45,600 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:45,601 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6,5,main]
+2014-12-14 19:06:45,604 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | Connection refused. Retry 1 of 3
+2014-12-14 19:06:50,585 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:50,587 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3,5,main]
+2014-12-14 19:06:50,591 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:50,593 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | Connection refused. Retry 3 of 3
+2014-12-14 19:06:50,595 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5,5,main]
+2014-12-14 19:06:50,599 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | Connection refused. Retry 2 of 3
+2014-12-14 19:06:50,601 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:50,602 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:50,603 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551610603
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:50,605 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551610603
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:50,607 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:50,608 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:50,610 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7,5,main]
+2014-12-14 19:06:50,614 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | Connection refused. Retry 1 of 3
+2014-12-14 19:06:50,754 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1,5,main] link null
+2014-12-14 19:06:50,756 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | RemoteEvent localAddr=/192.168.0.12:10076 remoteAddr=/192.168.0.12:12040 sourceName= sinkName=default seq=0 event=timestamp: 1418551580688
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:55,582 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2,5,main] link null
+2014-12-14 19:06:55,584 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | RemoteEvent localAddr=/192.168.0.12:10076 remoteAddr=/192.168.0.12:12040 sourceName= sinkName=default seq=1 event=timestamp: 1418551585536
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:55,593 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:55,595 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4,5,main]
+2014-12-14 19:06:55,600 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | Connection refused. Retry 3 of 3
+2014-12-14 19:06:55,605 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:55,607 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6,5,main]
+2014-12-14 19:06:55,608 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:06:55,610 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:06:55,613 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | Connection refused. Retry 2 of 3
+2014-12-14 19:06:55,615 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551615613
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:06:55,617 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551615613
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:06:55,618 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:06:55,619 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:06:55,620 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8,5,main]
+2014-12-14 19:06:55,623 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | Connection refused. Retry 1 of 3
+2014-12-14 19:07:00,595 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3,5,main] link null
+2014-12-14 19:07:00,597 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-3 | RemoteEvent localAddr=/192.168.0.12:10076 remoteAddr=/192.168.0.12:12040 sourceName= sinkName=default seq=2 event=timestamp: 1418551590547
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:00,601 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:00,603 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5,5,main]
+2014-12-14 19:07:00,607 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | Connection refused. Retry 3 of 3
+2014-12-14 19:07:00,616 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:00,618 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7,5,main]
+2014-12-14 19:07:00,619 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:07:00,622 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:07:00,623 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | Connection refused. Retry 2 of 3
+2014-12-14 19:07:00,624 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551620623
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:07:00,627 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551620623
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:00,629 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:07:00,630 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:00,631 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9,5,main]
+2014-12-14 19:07:00,637 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9 | Connection refused. Retry 1 of 3
+2014-12-14 19:07:05,602 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4,5,main] link null
+2014-12-14 19:07:05,604 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-4 | RemoteEvent localAddr=/192.168.0.12:10076 remoteAddr=/192.168.0.12:12040 sourceName= sinkName=default seq=3 event=timestamp: 1418551595558
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:05,615 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:05,617 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6,5,main]
+2014-12-14 19:07:05,621 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | Connection refused. Retry 3 of 3
+2014-12-14 19:07:05,624 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:05,626 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8,5,main]
+2014-12-14 19:07:05,630 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:07:05,631 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | Connection refused. Retry 2 of 3
+2014-12-14 19:07:05,633 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:07:05,635 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551625635
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:07:05,638 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551625635
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:05,639 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:07:05,640 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:05,641 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10,5,main]
+2014-12-14 19:07:05,645 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10 | Connection refused. Retry 1 of 3
+2014-12-14 19:07:10,609 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5,5,main] link null
+2014-12-14 19:07:10,611 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-5 | RemoteEvent localAddr=/192.168.0.12:10076 remoteAddr=/192.168.0.12:12040 sourceName= sinkName=default seq=4 event=timestamp: 1418551600572
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:10,625 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:10,627 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7,5,main]
+2014-12-14 19:07:10,630 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-7 | Connection refused. Retry 3 of 3
+2014-12-14 19:07:10,639 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:10,640 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:07:10,642 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9,5,main]
+2014-12-14 19:07:10,643 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:07:10,646 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-9 | Connection refused. Retry 2 of 3
+2014-12-14 19:07:10,648 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551630646
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:07:10,651 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551630646
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:10,652 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:07:10,653 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:10,654 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1,5,main]
+2014-12-14 19:07:10,658 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-1 | Connection refused. Retry 1 of 3
+2014-12-14 19:07:15,623 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.setLink org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6,5,main] link null
+2014-12-14 19:07:15,625 가장 미세 reef.wake.remote.impl.RemoteSenderEventHandler.consumeQueue org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-6 | RemoteEvent localAddr=/192.168.0.12:10076 remoteAddr=/192.168.0.12:12040 sourceName= sinkName=default seq=5 event=timestamp: 1418551605597
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:15,633 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:15,635 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8,5,main]
+2014-12-14 19:07:15,639 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-8 | Connection refused. Retry 3 of 3
+2014-12-14 19:07:15,647 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:15,649 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10,5,main]
+2014-12-14 19:07:15,652 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime.getEvaluatorStatus main | Evaluator heartbeat: state = RUNNING
+2014-12-14 19:07:15,654 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-10 | Connection refused. Retry 2 of 3
+2014-12-14 19:07:15,655 가장 미세 reef.runtime.common.evaluator.context.ContextManager.getContextStatusCollection main | Add context status: context_state: READY
+context_id: "ComputeContext-884736-0"
+
+2014-12-14 19:07:15,657 가장 미세 reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat main | Heartbeat message:
+timestamp: 1418551635657
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+java.lang.Exception: Stack trace
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartBeat(HeartBeatManager.java:124)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager.sendHeartbeat(HeartBeatManager.java:73)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:163)
+	at org.apache.reef.runtime.common.evaluator.HeartBeatManager$HeartbeatAlarmHandler.onNext(HeartBeatManager.java:158)
+	at org.apache.reef.wake.time.event.Alarm.handle(Alarm.java:37)
+	at org.apache.reef.wake.time.runtime.RuntimeClock.run(RuntimeClock.java:223)
+	at org.apache.reef.runtime.common.launch.LaunchClass.run(LaunchClass.java:162)
+	at org.apache.reef.runtime.common.Launcher.main(Launcher.java:111)
+
+2014-12-14 19:07:15,659 미세 reef.wake.remote.impl.ProxyEventHandler.onNext main | remoteid: /192.168.0.12:12040
+timestamp: 1418551635657
+evaluator_status {
+  evaluator_id: "Node-2-1418551575501"
+  state: RUNNING
+}
+context_status {
+  context_state: READY
+  context_id: "ComputeContext-884736-0"
+}
+
+2014-12-14 19:07:15,660 가장 미세 reef.wake.time.runtime.RuntimeClock.run main | Entering clock main loop iteration.
+2014-12-14 19:07:15,660 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Link null for /192.168.0.12:12040 found
+2014-12-14 19:07:15,662 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | No cached link for /192.168.0.12:12040 thread Thread[org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2,5,main]
+2014-12-14 19:07:15,665 경고 reef.wake.remote.transport.netty.NettyMessagingTransport.open org.apache.reef.wake.remote.impl.RemoteSenderStage-pool-6-thread-2 | Connection refused. Retry 1 of 3

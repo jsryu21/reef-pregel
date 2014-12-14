@@ -1,15 +1,16 @@
 package edu.snu.bdcs.reef.pregel.data;
 
-import edu.snu.bdcs.reef.pregel.Inject;
-import edu.snu.bdcs.reef.pregel.utils.DataParser;
-import edu.snu.bdcs.reef.pregel.utils.ParseException;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.mahout.math.DenseVector;
 import org.apache.mahout.math.Vector;
 import org.apache.reef.io.data.loading.api.DataSet;
 import org.apache.reef.io.network.util.Pair;
+import edu.snu.bdcs.reef.pregel.utils.DataParser;
+import edu.snu.bdcs.reef.pregel.utils.ParseException;
 
+
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;

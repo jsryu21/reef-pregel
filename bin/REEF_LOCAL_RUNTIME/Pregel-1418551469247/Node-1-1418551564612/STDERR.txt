@@ -1,0 +1,31 @@
+2014-12-14 19:06:04,807 미세 reef.runtime.common.Launcher.main main | Launcher started with user name [puppybit]
+2014-12-14 19:06:04,880 미세 reef.runtime.common.Launcher.main main | Launcher started. Assertions are DISABLED in this process.
+2014-12-14 19:06:05,091 미세 reef.wake.impl.StageManager.<init> main | StageManager adds a shutdown hook
+2014-12-14 19:06:05,092 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@64b23147
+2014-12-14 19:06:05,098 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.impl.ThreadPoolStage@19f7456f
+2014-12-14 19:06:05,112 미세 reef.wake.remote.NetUtils.getLocalAddress main | Local address is 192.168.0.12
+2014-12-14 19:06:05,410 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Binding to 0
+2014-12-14 19:06:05,411 가장 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Try port 11,343
+2014-12-14 19:06:08,476 미세 reef.wake.remote.transport.netty.NettyMessagingTransport.<init> main | Starting netty transport socket address: /192.168.0.12:11343
+2014-12-14 19:06:08,479 가장 미세 reef.wake.impl.StageManager.register main | StageManager adds stage org.apache.reef.wake.remote.impl.DefaultRemoteManagerImplementation@257b746
+2014-12-14 19:06:08,479 가장 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.<init> main | RemoteManager REEF_LAUNCHER instantiated id socket://192.168.0.12:11343 counter 1 listening on /192.168.0.12:11343:11,343
+2014-12-14 19:06:08,480 미세 reef.runtime.common.utils.RemoteManager.<init> main | Instantiated RemoteManager with remoteId: socket://192.168.0.12:11343
+2014-12-14 19:06:08,482 미세 reef.runtime.common.Launcher.main main | Launcher starting
+2014-12-14 19:06:08,483 보다 미세 reef.runtime.common.launch.LaunchClass.run main | ENTRY Starting the clock
+2014-12-14 19:06:08,484 가장 미세 reef.runtime.common.launch.LaunchClass.readConfigurationFromDisk main | Loading configuration file: reef/local/evaluator.conf
+2014-12-14 19:06:08,884 미세 reef.wake.time.runtime.RuntimeClock.<init> main | RuntimeClock instantiated.
+2014-12-14 19:06:08,890 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.getHandler main | RemoteManager: REEF_LAUNCHER destinationIdentifier: socket://192.168.0.12:12040 messageType: org.apache.reef.proto.EvaluatorRuntimeProtocol$EvaluatorHeartbeatProto
+2014-12-14 19:06:08,892 미세 reef.wake.remote.impl.ProxyEventHandler.<init> main | ProxyEventHandler myId: socket://192.168.0.12:11343 remoteId: socket://192.168.0.12:12040 remoteSink: default handler: org.apache.reef.wake.remote.impl.RemoteSenderEventHandler@1e66b1f4
+2014-12-14 19:06:08,897 미세 reef.wake.remote.impl.DefaultRemoteManagerImplementation.registerHandler main | RemoteManager: REEF_LAUNCHER remoteid: socket://192.168.0.12:12040 messageType: org.apache.reef.proto.EvaluatorRuntimeProtocol$EvaluatorControlProto handler: org.apache.reef.runtime.common.evaluator.EvaluatorRuntime
+2014-12-14 19:06:08,899 보다 미세 reef.wake.remote.impl.HandlerContainer.registerHandler main | socket://192.168.0.12:12040 class org.apache.reef.proto.EvaluatorRuntimeProtocol$EvaluatorControlProto
+2014-12-14 19:06:08,972 보다 미세 reef.wake.time.runtime.RuntimeClock.run main | ENTRY
+2014-12-14 19:06:08,973 미세 reef.wake.time.runtime.RuntimeClock.run main | Subscribe event handlers
+2014-12-14 19:06:08,976 미세 reef.wake.time.runtime.RuntimeClock.run main | Initiate runtime start
+2014-12-14 19:06:08,977 가장 미세 reef.wake.impl.PubSubEventHandler.onNext main | Invoked for event: org.apache.reef.wake.time.runtime.event.RuntimeStart[1418551568977]
+2014-12-14 19:06:08,978 가장 미세 reef.wake.impl.PubSubEventHandler.onNext main | Invoking org.apache.reef.runtime.common.evaluator.EvaluatorRuntime$RuntimeStartHandler@1f0f2a1a
+2014-12-14 19:06:08,978 가장 미세 reef.runtime.common.evaluator.EvaluatorRuntime$RuntimeStartHandler.onNext main | runtime start
+2014-12-14 19:06:08,979 가장 미세 reef.runtime.common.evaluator.context.ContextManager.start main | Instantiating root context.
+2014-12-14 19:06:09,435 미세 hadoop.metrics2.lib.MutableMetricsFactory.newForField main | field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of successful kerberos logins and latency (milliseconds)], about=, valueName=Time, type=DEFAULT, always=false, sampleName=Ops)
+2014-12-14 19:06:09,457 미세 hadoop.metrics2.lib.MutableMetricsFactory.newForField main | field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of failed kerberos logins and latency (milliseconds)], about=, valueName=Time, type=DEFAULT, always=false, sampleName=Ops)
+2014-12-14 19:06:09,462 미세 hadoop.metrics2.lib.MutableMetricsFactory.newForField main | field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[GetGroups], about=, valueName=Time, type=DEFAULT, always=false, sampleName=Ops)
+2014-12-14 19:06:09,464 미세 hadoop.metrics2.impl.MetricsSystemImpl.register main | UgiMetrics, User and group related metrics

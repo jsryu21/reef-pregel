@@ -133,7 +133,6 @@ public final class PregelDriver {
                 Configuration finalServiceConf;
 
                 if (dataLoadingService.isComputeContext(activeContext)) {
-
                     LOG.log(Level.INFO, "Submitting GroupCommContext for ControllerTask to underlying context");
                     ctrlTaskContextId = getContextId(groupCommContextConf);
                     finalServiceConf = groupCommServiceConf;

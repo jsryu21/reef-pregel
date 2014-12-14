@@ -19,7 +19,6 @@ edu/snu/bdcs/reef/pregel/parameters/EvaluatorSize.class
 edu/snu/bdcs/reef/pregel/groupcomm/names/CommunicationGroup.class
 edu/snu/bdcs/reef/pregel/utils/ParseException.class
 edu/snu/bdcs/reef/pregel/parameters/Timeout.class
-edu/snu/bdcs/reef/pregel/Inject.class
 edu/snu/bdcs/reef/pregel/PregelDriver$FailedTaskHandler.class
 edu/snu/bdcs/reef/pregel/data/PregelDataParser.class
 edu/snu/bdcs/reef/pregel/PregelComputeTask$1.class

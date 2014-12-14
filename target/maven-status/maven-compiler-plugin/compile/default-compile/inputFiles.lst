@@ -3,7 +3,6 @@
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/OnLocal.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/utils/DataParser.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/names/InitialTopoReduce.java
-/home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/Inject.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/Timeout.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/MaxSuperSteps.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/utils/DataParseService.java
