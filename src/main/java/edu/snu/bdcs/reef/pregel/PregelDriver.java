@@ -127,9 +127,11 @@ public final class PregelDriver {
         @Override
         public void onNext(final ActiveContext activeContext) {
 
+            LOG.log(Level.SEVERE, "Debug Test2 " + groupCommDriver.isConfigured(activeContext));
+
             if (!groupCommDriver.isConfigured(activeContext)) {
                 Configuration groupCommContextConf = groupCommDriver.getContextConfiguration();
-                Configuration groupCommServiceConf = groupCommDriver.getContextConfiguration();
+                Configuration groupCommServiceConf = groupCommDriver.getServiceConfiguration();
                 Configuration finalServiceConf;
 
                 if (dataLoadingService.isComputeContext(activeContext)) {
@@ -142,7 +144,7 @@ public final class PregelDriver {
                     finalServiceConf = Configurations.merge(groupCommServiceConf, dataParseConf);
                 }
 
-                activeContext.submitContextAndService(groupCommServiceConf, finalServiceConf);
+                activeContext.submitContextAndService(groupCommContextConf, finalServiceConf);
 
             } else {
                 final Configuration partialTaskConf;

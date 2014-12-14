@@ -22,6 +22,6 @@ import org.apache.reef.tang.annotations.NamedParameter;
 
 @NamedParameter(doc = "Maximum number of supersteps allowed in pregel systems",
         short_name = "maxSteps",
-        default_value = "1000")
+        default_value = "10")
 public final class MaxSuperSteps implements Name<Integer> {
 }
