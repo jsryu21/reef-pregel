@@ -13,13 +13,13 @@ import edu.snu.bdcs.reef.pregel.utils.ParseException;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  * Created by puppybit on 14. 11. 30.
  */
 public final class PregelDataParser implements DataParser<Pair<List<Vector>, List<Vector>>> {
-
     private final static Logger LOG = Logger.getLogger(PregelDataParser.class.getName());
 
     private final DataSet<LongWritable, Text> dataSet;
@@ -45,12 +45,12 @@ public final class PregelDataParser implements DataParser<Pair<List<Vector>, Lis
     }
 
     @Override
-    public void parse() {
+    public final void parse() {
         List<Vector> vertexList = new ArrayList<>();
         List<Vector> edgeList = new ArrayList<>();
 
         for (final Pair<LongWritable, Text> keyValue : dataSet) {
-            String[] split = keyValue.toString().trim().split("\\s+");
+            String[] split = keyValue.second.toString().trim().split("\\s+");
             if (split.length == 0) {
                 continue;
             }
@@ -81,5 +81,6 @@ public final class PregelDataParser implements DataParser<Pair<List<Vector>, Lis
 
             result = new Pair<>(vertexList, edgeList);
         }
+
     }
 }

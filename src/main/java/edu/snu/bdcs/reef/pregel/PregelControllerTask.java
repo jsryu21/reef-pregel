@@ -78,11 +78,12 @@ public final class PregelControllerTask implements Task{
     public final byte[] call(byte[] memento) throws Exception {
         LOG.log(Level.INFO, "ControllerTask.call() commencing....");
 
-
         ctrlMsgBroadcast.send(ControlMessage.INITIATE);
+
         final List<Vertex> allVertexList = initialTopologyReduce.reduce();
 
-        LOG.log(Level.SEVERE, "Debug1 finished!!!!");
+        LOG.log(Level.INFO, "Debug1 ");
+
 
         ctrlMsgBroadcast.send(ControlMessage.TERMINATE);
 

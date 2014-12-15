@@ -89,6 +89,7 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
 
         vectorList = dataParser.get().first;
 
+
         for (final Vector vector : vectorList){
             vertexList.add(new Vertex(vector));
         }
@@ -98,7 +99,6 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
 
         boolean terminate = false;
         while (!terminate){
-
             switch (ctrlSyncBroadcast.receive()) {
                 case TERMINATE:
                     terminate = true;
@@ -106,6 +106,7 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
 
                 case INITIATE:
                     initialTopoReduce.send(vertexList);
+                    LOG.log(Level.SEVERE, "Debug2 ");
                     break;
 
                 case COMPUTE:

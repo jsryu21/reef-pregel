@@ -1,6 +1,8 @@
 package edu.snu.bdcs.reef.pregel.groupcomm.subs;
 
 import edu.snu.bdcs.reef.pregel.data.Vertex;
+import org.apache.mahout.math.DenseVector;
+import org.apache.mahout.math.Vector;
 import org.apache.reef.io.serialization.Codec;
 
 
@@ -22,32 +24,29 @@ public final class VertexListCodec implements Codec<List<Vertex>>{
     @Override
     public final byte[] encode(final List<Vertex> list) {
 
-        int adjVertexListSizeSum = 0;
+        int adjVertexVectorSizeSum = 0;
 
         for (final Vertex vertex : list) {
-            adjVertexListSizeSum += vertex.getAdjVertexList().size();
+            adjVertexVectorSizeSum += vertex.messageVector.size();
         }
 
         final ByteArrayOutputStream baos = new ByteArrayOutputStream(Integer.SIZE + Integer.SIZE * 2 * list.size()
-        + Double.SIZE * list.size() + Integer.SIZE * adjVertexListSizeSum);
+        + Double.SIZE * adjVertexVectorSizeSum);
 
         try (final DataOutputStream daos = new DataOutputStream(baos)) {
             daos.writeInt(list.size());
             for (final Vertex vertex : list){
                 daos.writeInt(vertex.getVertextId());
-                daos.writeDouble(vertex.getVertextValue());
-                daos.writeInt(vertex.adjVertexList.size());
+                daos.writeInt(vertex.messageVector.size());
 
-                for (int j = 0; j < vertex.adjVertexList.size(); j++){
-                    daos.writeInt(vertex.adjVertexList.get(j));
+                for (int j = 0; j < vertex.messageVector.size(); j++){
+                    daos.writeDouble(vertex.messageVector.get(j));
                 }
             }
 
         } catch (final IOException e) {
             throw new RuntimeException(e.getCause());
         }
-
-
 
         return baos.toByteArray();
     }
@@ -62,15 +61,14 @@ public final class VertexListCodec implements Codec<List<Vertex>>{
 
             for (int i = 0; i < listSize; i++){
                 final int vertexID = dais.readInt();
-                final double vertexValue = dais.readDouble();
-                final int vertexListSize = dais.readInt();
-                final List<Integer> adjVertexList = new ArrayList<Integer>(vertexListSize);
+                final int messageVectorSize = dais.readInt();
+                final Vector vector = new DenseVector(messageVectorSize);
 
-                for (int j = 0; j < vertexListSize; j++) {
-                    adjVertexList.add(j, dais.readInt());
+                for (int j = 0; j < messageVectorSize; j++) {
+                    vector.set(j, dais.readDouble());
                 }
 
-                list.add(new Vertex(vertexID, vertexValue, adjVertexList));
+                list.add(new Vertex(vertexID, vector));
             }
 
         } catch (final IOException e){
