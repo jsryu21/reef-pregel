@@ -119,6 +119,12 @@ public final class PregelDriver {
                                 .setDataCodecClass(VertexListCodec.class)
                                 .setReduceFunctionClass(VertexListReduceFunction.class)
                                 .build())
+                .addReduce(MessageVectorReduce.class,
+                        ReduceOperatorSpec.newBuilder()
+                                .setReceiverId(PregelControllerTask.TASK_ID)
+                                .setDataCodecClass(VectorListCodec.class)
+                                .setReduceFunctionClass(VectorListReduceFunction.class)
+                                .build())
                 .finalise();
 
     }

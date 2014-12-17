@@ -8,6 +8,7 @@ import edu.snu.bdcs.reef.pregel.data.Vertex;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.InitialTopoReduce;
+import edu.snu.bdcs.reef.pregel.groupcomm.names.MessageVectorReduce;
 import edu.snu.bdcs.reef.pregel.parameters.ControlMessage;
 import edu.snu.bdcs.reef.pregel.utils.DataParser;
 import org.apache.mahout.math.Vector;
@@ -45,6 +46,9 @@ public final class PregelComputeTask implements Task{
      * e.g. INITIATE, TERMINATE, COnMPUTE
      */
 
+    private final Reduce.Sender<List<Vector>> messageVectorReduce;
+
+
     private final Broadcast.Receiver<ControlMessage> ctrlSyncBroadcast;
 
 
@@ -73,9 +77,10 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
     super();
     this.dataParser = dataParser;
 
-    CommunicationGroupClient commCroupClient = groupCommClient.getCommunicationGroup(CommunicationGroup.class);
-    this.initialTopoReduce = commCroupClient.getReduceSender(InitialTopoReduce.class);
-    this.ctrlSyncBroadcast = commCroupClient.getBroadcastReceiver(CtrlSyncBroadcast.class);
+    CommunicationGroupClient commGroupClient = groupCommClient.getCommunicationGroup(CommunicationGroup.class);
+    this.initialTopoReduce = commGroupClient.getReduceSender(InitialTopoReduce.class);
+    this.ctrlSyncBroadcast = commGroupClient.getBroadcastReceiver(CtrlSyncBroadcast.class);
+    this.messageVectorReduce = commGroupClient.getReduceSender(MessageVectorReduce.class);
 
 }
 
@@ -105,7 +110,8 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
                     break;
 
                 case INITIATE:
-                    initialTopoReduce.send(vertexList);
+//                    initialTopoReduce.send(vertexList);
+                    messageVectorReduce.send(vectorList);
                     LOG.log(Level.SEVERE, "Debug2 ");
                     break;
 

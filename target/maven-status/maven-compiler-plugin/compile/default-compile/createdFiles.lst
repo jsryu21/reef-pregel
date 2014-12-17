@@ -6,6 +6,7 @@ edu/snu/bdcs/reef/pregel/PregelREEF.class
 edu/snu/bdcs/reef/pregel/parameters/MaxSuperSteps.class
 edu/snu/bdcs/reef/pregel/PregelControllerTask.class
 edu/snu/bdcs/reef/pregel/data/Vertex.class
+edu/snu/bdcs/reef/pregel/groupcomm/subs/VectorListCodec.class
 edu/snu/bdcs/reef/pregel/parameters/ControlMessage.class
 edu/snu/bdcs/reef/pregel/parameters/SplitNum.class
 edu/snu/bdcs/reef/pregel/PregelComputeTask.class
@@ -16,6 +17,7 @@ edu/snu/bdcs/reef/pregel/data/Edge.class
 edu/snu/bdcs/reef/pregel/utils/Parameters.class
 edu/snu/bdcs/reef/pregel/PregelDriver$ActiveContextHandler.class
 edu/snu/bdcs/reef/pregel/parameters/EvaluatorSize.class
+edu/snu/bdcs/reef/pregel/groupcomm/names/MessageVectorReduce.class
 edu/snu/bdcs/reef/pregel/groupcomm/names/CommunicationGroup.class
 edu/snu/bdcs/reef/pregel/utils/ParseException.class
 edu/snu/bdcs/reef/pregel/parameters/Timeout.class
@@ -23,6 +25,7 @@ edu/snu/bdcs/reef/pregel/PregelDriver$FailedTaskHandler.class
 edu/snu/bdcs/reef/pregel/data/PregelDataParser.class
 edu/snu/bdcs/reef/pregel/PregelComputeTask$1.class
 edu/snu/bdcs/reef/pregel/utils/DataParseService$ContextStartHandler.class
-edu/snu/bdcs/reef/pregel/groupcomm/subs/VertexListReduceFunction.class
 edu/snu/bdcs/reef/pregel/utils/DataParser.class
+edu/snu/bdcs/reef/pregel/groupcomm/subs/VertexListReduceFunction.class
+edu/snu/bdcs/reef/pregel/groupcomm/subs/VectorListReduceFunction.class
 edu/snu/bdcs/reef/pregel/PregelDriver.class

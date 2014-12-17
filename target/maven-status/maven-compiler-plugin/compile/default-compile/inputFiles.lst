@@ -1,4 +1,5 @@
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/names/CtrlSyncBroadcast.java
+/home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/subs/VectorListCodec.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/InputDir.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/OnLocal.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/utils/DataParser.java
@@ -14,6 +15,7 @@
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/PregelDriver.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/SplitNum.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/PregelControllerTask.java
+/home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/subs/VectorListReduceFunction.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/data/PregelDataParser.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/ControlMessage.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/names/CommunicationGroup.java
@@ -22,4 +24,5 @@
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/PregelParameters.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/utils/Parameters.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/EvaluatorSize.java
+/home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/names/MessageVectorReduce.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/PregelComputeTask.java
