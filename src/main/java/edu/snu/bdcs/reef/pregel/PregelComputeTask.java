@@ -5,10 +5,7 @@ import com.microsoft.reef.io.network.group.operators.Reduce;
 import com.microsoft.reef.io.network.nggroup.api.task.CommunicationGroupClient;
 import com.microsoft.reef.io.network.nggroup.api.task.GroupCommClient;
 import edu.snu.bdcs.reef.pregel.data.Vertex;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.CommunicationGroup;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.CtrlSyncBroadcast;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.InitialTopoReduce;
-import edu.snu.bdcs.reef.pregel.groupcomm.names.MessageVectorReduce;
+import edu.snu.bdcs.reef.pregel.groupcomm.names.*;
 import edu.snu.bdcs.reef.pregel.parameters.ControlMessage;
 import edu.snu.bdcs.reef.pregel.utils.DataParser;
 import org.apache.mahout.math.Vector;
@@ -35,21 +32,24 @@ public final class PregelComputeTask implements Task{
     private final DataParser<Pair<List<Vector>, List<Vector>>> dataParser;
 
     /**
-     * Send the initial graph topology information to Controller Task
-     * This is just test function
+     * Send the message information to Controller Task
      */
-
-    private  final Reduce.Sender<List<Vertex>> initialTopoReduce;
-
-    /**
-     * Receive control messages from Controller Task on what to do
-     * e.g. INITIATE, TERMINATE, COnMPUTE
-     */
-
     private final Reduce.Sender<List<Vector>> messageVectorReduce;
 
 
+    /**
+     * Receive control messages from Controller Task on what to do
+     * e.g. INITIATE, TERMINATE, COMPUTE
+     */
+
     private final Broadcast.Receiver<ControlMessage> ctrlSyncBroadcast;
+
+
+    /**
+     * receive the message information from Controller Task
+     */
+
+    private final Broadcast.Receiver<List<Vector>> messageVectorBroadcast;
 
 
     /**
@@ -57,9 +57,9 @@ public final class PregelComputeTask implements Task{
      * vertex read from input data
      *
      */
-    private List<Vector> vectorList = new ArrayList<>();
+    private List<Vector> GroupList = new ArrayList<>();
 
-    private List<Vertex> vertexList = new ArrayList<>();
+    private List<Vector> ComputeList = new ArrayList<>();
 
     /**
      * This class is instantiated by TANG
@@ -78,9 +78,9 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
     this.dataParser = dataParser;
 
     CommunicationGroupClient commGroupClient = groupCommClient.getCommunicationGroup(CommunicationGroup.class);
-    this.initialTopoReduce = commGroupClient.getReduceSender(InitialTopoReduce.class);
     this.ctrlSyncBroadcast = commGroupClient.getBroadcastReceiver(CtrlSyncBroadcast.class);
     this.messageVectorReduce = commGroupClient.getReduceSender(MessageVectorReduce.class);
+    this.messageVectorBroadcast = commGroupClient.getBroadcastReceiver(MessageVectorBroadcast.class);
 
 }
 
@@ -92,12 +92,7 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
 
         //0. Read the vertex and edge from input data
 
-        vectorList = dataParser.get().first;
-
-
-        for (final Vector vector : vectorList){
-            vertexList.add(new Vertex(vector));
-        }
+        GroupList = dataParser.get().first;
 
 
         // 1. Start Algorithm
@@ -110,24 +105,55 @@ PregelComputeTask(final DataParser<Pair<List<Vector>, List<Vector>>> dataParser,
                     break;
 
                 case INITIATE:
-//                    initialTopoReduce.send(vertexList);
-                    messageVectorReduce.send(vectorList);
-                    LOG.log(Level.SEVERE, "Debug2 ");
+                    messageVectorReduce.send(GroupList);
                     break;
 
+                case READY:
+                    ComputeList = messageVectorBroadcast.receive();
+                    for (int i = 0; i < GroupList.size();i++){
+                        GroupList.get(i).set(1, ComputeList.get(0).get(1));
+                    }
+
+                    LOG.log(Level.SEVERE, "Debug2 " + "Node " + GroupList.get(0).get(0) + " Value : " + GroupList.get(0).get(1));
+
                 case COMPUTE:
+
                     computePageRank();
+                    LOG.log(Level.SEVERE, "Debug4");
                     break;
 
                 default:
                     break;
             }
         }
+
+        for (Vector resultVertex : GroupList){
+            System.out.print("R_E_S_U_L_T : " + "Vertex " + (int)resultVertex.get(0) + ", Page Rank : " + Double.parseDouble(String.format("%.3f", resultVertex.get(1))) );
+            System.out.printf("\n");
+//            LOG.log(Level.SEVERE, "***Result : " + "Vertex Node " + (int)resultVertex.get(0) + " Page Rank : " + resultVertex.get(1));
+        }
+
         return null;
     }
 
     private final void computePageRank() throws Exception{
 
+        for (Vector computeVertex : GroupList) {
+
+            double sum = 0;
+
+            for (int i=0; i<ComputeList.size();i++){
+                for (int j=2; j<ComputeList.get(i).size();j++){
+                    if (computeVertex.get(0) == ComputeList.get(i).get(j)){
+                        sum = sum + ComputeList.get(i).get(1);
+                    }
+                }
+            }
+            double mutableValue = 0.15 * computeVertex.get(1) + 0.85 * sum;
+            computeVertex.set(1, mutableValue);
+        }
+
+        messageVectorReduce.send(GroupList);
 
     }
 

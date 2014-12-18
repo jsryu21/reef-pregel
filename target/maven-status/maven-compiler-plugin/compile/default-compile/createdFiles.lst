@@ -13,6 +13,7 @@ edu/snu/bdcs/reef/pregel/PregelComputeTask.class
 edu/snu/bdcs/reef/pregel/groupcomm/subs/VertexListCodec.class
 edu/snu/bdcs/reef/pregel/groupcomm/names/InitialTopoReduce.class
 edu/snu/bdcs/reef/pregel/parameters/OnLocal.class
+edu/snu/bdcs/reef/pregel/groupcomm/names/MessageVectorBroadcast.class
 edu/snu/bdcs/reef/pregel/data/Edge.class
 edu/snu/bdcs/reef/pregel/utils/Parameters.class
 edu/snu/bdcs/reef/pregel/PregelDriver$ActiveContextHandler.class

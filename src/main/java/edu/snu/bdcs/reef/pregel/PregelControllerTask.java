@@ -7,6 +7,7 @@ import edu.snu.bdcs.reef.pregel.data.Vertex;
 import edu.snu.bdcs.reef.pregel.groupcomm.names.*;
 import edu.snu.bdcs.reef.pregel.parameters.ControlMessage;
 import edu.snu.bdcs.reef.pregel.parameters.MaxSuperSteps;
+import org.apache.mahout.math.DenseVector;
 import org.apache.mahout.math.Vector;
 import org.apache.reef.tang.annotations.Parameter;
 import org.apache.reef.task.Task;
@@ -36,12 +37,16 @@ public final class PregelControllerTask implements Task{
 
 
     /**
-     * Receive initial Graph topology from Compute Tasks
+     * Receive messages from Compute Tasks
      */
 
-    private final Reduce.Receiver<List<Vertex>> initialTopologyReduce;
-
     private final Reduce.Receiver<List<Vector>> messageVectorReduce;
+
+    /**
+     * Send messages to Compute Tasks
+     */
+
+    private final Broadcast.Sender<List<Vector>> messageVectorBroadcast;
 
 
     /**
@@ -70,9 +75,9 @@ public final class PregelControllerTask implements Task{
         super();
 
         this.communicationGroupClient = groupCommClient.getCommunicationGroup(CommunicationGroup.class);
-        this.initialTopologyReduce = communicationGroupClient.getReduceReceiver(InitialTopoReduce.class);
         this.ctrlMsgBroadcast = communicationGroupClient.getBroadcastSender(CtrlSyncBroadcast.class);
         this.messageVectorReduce = communicationGroupClient.getReduceReceiver(MessageVectorReduce.class);
+        this.messageVectorBroadcast = communicationGroupClient.getBroadcastSender(MessageVectorBroadcast.class);
         this.maxSuperSteps = maxSteps;
 
     }
@@ -85,10 +90,23 @@ public final class PregelControllerTask implements Task{
 
         ctrlMsgBroadcast.send(ControlMessage.INITIATE);
 
-//        final List<Vertex> allVertexList = initialTopologyReduce.reduce();
-        final List<Vector> vectorList = messageVectorReduce.reduce();
+        List<Vector> vectorList = messageVectorReduce.reduce();
 
-        LOG.log(Level.INFO, "Debug1 " + vectorList.get(0).get(0));
+        /* calculate 1 / NumVertices() */
+
+        for (int i = 0; i < vectorList.size();i++){
+            vectorList.get(i).set(1, Double.parseDouble(String.format("%.3f", vectorList.get(i).get(1)/vectorList.size())));
+        }
+
+        ctrlMsgBroadcast.send(ControlMessage.READY);
+        messageVectorBroadcast.send(vectorList);
+
+
+        for (int iteration = 0; iteration < maxSuperSteps; iteration++) {
+            ctrlMsgBroadcast.send(ControlMessage.COMPUTE);
+            vectorList = messageVectorReduce.reduce();
+            messageVectorBroadcast.send(vectorList);
+        }
 
 
         ctrlMsgBroadcast.send(ControlMessage.TERMINATE);

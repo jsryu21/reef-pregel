@@ -113,11 +113,10 @@ public final class PregelDriver {
                                 .setSenderId(PregelControllerTask.TASK_ID)
                                 .setDataCodecClass(SerializableCodec.class)
                                 .build())
-                .addReduce(InitialTopoReduce.class,
-                        ReduceOperatorSpec.newBuilder()
-                                .setReceiverId(PregelControllerTask.TASK_ID)
-                                .setDataCodecClass(VertexListCodec.class)
-                                .setReduceFunctionClass(VertexListReduceFunction.class)
+                .addBroadcast(MessageVectorBroadcast.class,
+                        BroadcastOperatorSpec.newBuilder()
+                                .setSenderId(PregelControllerTask.TASK_ID)
+                                .setDataCodecClass(VectorListCodec.class)
                                 .build())
                 .addReduce(MessageVectorReduce.class,
                         ReduceOperatorSpec.newBuilder()

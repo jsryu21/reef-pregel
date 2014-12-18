@@ -8,8 +8,8 @@
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/MaxSuperSteps.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/utils/DataParseService.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/PregelREEF.java
-/home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/data/Vertex.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/subs/VertexListReduceFunction.java
+/home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/data/Vertex.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/subs/VertexListCodec.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/data/Edge.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/PregelDriver.java
@@ -24,5 +24,6 @@
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/PregelParameters.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/utils/Parameters.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/parameters/EvaluatorSize.java
+/home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/names/MessageVectorBroadcast.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/groupcomm/names/MessageVectorReduce.java
 /home/puppybit/Workspace/reef-pregel/src/main/java/edu/snu/bdcs/reef/pregel/PregelComputeTask.java
